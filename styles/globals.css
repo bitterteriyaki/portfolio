@@ -1,16 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
 :root {
   --charlie: #f7aef8;
   --luna: #48bf84;
   --oliver: #3772ff;
   --loki: #ffe66d;
+  --willow: #fafafa;
+  --bella: #bfbfbf;
 }
 
-html,
-body {
+::-webkit-scrollbar {
+  width: 12px;
+  
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--bella);
+  border: 3px solid var(--willow);
+  border-radius: 15px;
+}
+
+html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--willow);
+  font-family: 'Inter', sans-serif;
 }
 
 a {
