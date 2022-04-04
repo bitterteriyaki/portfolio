@@ -1,0 +1,5 @@
+.indicator {
+  background-color: var(--oliver);
+  position: fixed;
+  height: 0.2rem;
+}

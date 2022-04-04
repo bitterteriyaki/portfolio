@@ -1,3 +1,10 @@
+:root {
+  --charlie: #f7aef8;
+  --luna: #48bf84;
+  --oliver: #3772ff;
+  --loki: #ffe66d;
+}
+
 html,
 body {
   padding: 0;
