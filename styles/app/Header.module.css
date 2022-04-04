@@ -12,16 +12,19 @@
 
 .option {
   margin: 20px;
+  color: var(--milo);
+  transition: 0.1s linear;
 }
 
 .option:hover {
-  text-decoration: underline;
+  color: black;
 }
 
 .resume {
-  padding: 12px 28px;
+  padding: 10px 22px;
+  color: var(--oliver);
   border: 1px solid var(--oliver);
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.1s linear;
 }
 
