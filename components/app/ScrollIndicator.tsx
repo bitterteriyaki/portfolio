@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
 import styles from '../../styles/app/ScrollIndicator.module.css'
 
-const ScrollIndicator: NextPage = () => {
+const ScrollIndicator: React.FC = () => {
   const [offset, setOffset] = useState<number>()
   const style = { width: `${offset}%` }
 
