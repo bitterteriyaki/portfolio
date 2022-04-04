@@ -21,8 +21,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 html, body {
-  padding: 0;
-  margin: 0;
   background-color: var(--willow);
   font-family: 'Inter', sans-serif;
 }
@@ -34,4 +32,11 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
