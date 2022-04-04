@@ -19,7 +19,7 @@
 }
 
 .resume {
-  padding: 15px 35px;
+  padding: 12px 28px;
   border: 1px solid var(--oliver);
   border-radius: 5px;
   transition: 0.1s linear;
@@ -27,6 +27,6 @@
 
 .resume:hover {
   background-color: var(--oliver);
-  box-shadow: 0px 0px 20px 0px var(--oliver);
+  box-shadow: 0px 0px 20px -2px var(--oliver);
   color: white;
 }
