@@ -5,7 +5,7 @@ import styles from '../styles/pages/Home.module.css'
 const Home: NextPage = () => {
   return (
     <main>
-      <section className={styles.intro}>
+      <section data-aos='fade-up' className={styles.intro}>
         <div className={styles.name}>
           <h2>Hi!</h2>
           <h1>My name is kyomi.</h1>
