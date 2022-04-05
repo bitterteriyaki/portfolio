@@ -2,13 +2,13 @@ import AOS from 'aos'
 import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 
-import ScrollIndicator from '../components/app/ScrollIndicator'
-import Header from '../components/app/Header'
+import ScrollIndicator from '../components/ScrollIndicator'
+import Header from '../components/Header'
 import 'aos/dist/aos.css'
 import '../styles/globals.css'
 
 function App({ Component, pageProps }: AppProps) {
-  useEffect(() => { AOS.init({ easing: 'ease-out-cubic' }) }, [])
+  useEffect(() => { AOS.init({ easing: 'ease-out-cubic', once: true }) }, [])
 
   return (
     <>

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
-import styles from '../../styles/app/ScrollIndicator.module.css'
+import styles from '../styles/ScrollIndicator.module.css'
 
 const ScrollIndicator: React.FC = () => {
   const [offset, setOffset] = useState<number>()

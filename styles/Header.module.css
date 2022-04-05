@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  padding: 30px 40px;
+  height: var(--header-size);
+  padding: 0 40px;
   align-items: center;
   justify-content: space-between;
 }
@@ -32,4 +33,5 @@
   color: white;
   background-color: var(--oliver);
   box-shadow: 0px 0px 20px -2px var(--oliver);
+  text-decoration: none;
 }

@@ -1,7 +1,7 @@
 .intro {
   display: flex;
   margin: 0 auto;
-  height: 80vh;
+  height: calc(100vh - var(--header-size));
   max-width: 960px;
   align-items: center;
   justify-content: space-between;
@@ -23,13 +23,7 @@
   width: 520px;
 }
 
-.name h3 a {
-  text-decoration: underline;
-  color: var(--oliver);
-}
-
 .github {
   font-size: 16pt;
-  text-decoration: underline;
-  color: var(--oliver);
 }
+  
