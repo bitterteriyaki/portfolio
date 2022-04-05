@@ -1,0 +1,35 @@
+.intro {
+  display: flex;
+  margin: 0 auto;
+  height: 80vh;
+  max-width: 960px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name h2 {
+  font-weight: normal;
+  font-size: 25pt;
+}
+
+.name h1 {
+  font-size: 30pt;
+}
+
+.name h3 {
+  font-weight: normal;
+  margin-top: 45px;
+  color: var(--milo);
+  width: 520px;
+}
+
+.name h3 a {
+  text-decoration: underline;
+  color: var(--oliver);
+}
+
+.github {
+  font-size: 16pt;
+  text-decoration: underline;
+  color: var(--oliver);
+}
