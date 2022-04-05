@@ -19,7 +19,9 @@ const Home: NextPage = () => {
           </h3>
         </div>
         <div className={styles.github}>
-          <a href='https://github.com/soukyomi' target='_blank'>github.com/soukyomi &#8250;</a>
+          <a href='https://github.com/soukyomi' target='_blank' rel='noreferrer'>
+            github.com/soukyomi &#8250;
+          </a>
         </div>
       </section>
     </main>
