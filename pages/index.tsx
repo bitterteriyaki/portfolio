@@ -5,10 +5,10 @@ import Showcase from '../components/Showcase'
 
 const Home: NextPage = () => {
   return (
-    <main>
+    <>
       <Introduction />
       <Showcase />
-    </main>
+    </>
   )
 }
 
