@@ -41,7 +41,7 @@ const Showcase: React.FC = () => {
           A simple library to make terminal logs more beautiful and readable.
         </Item>
         <Item title='React Notes' repository='react-notes'>
-          This is a small sample project where I created a notes website using
+          A small sample project where I created a notes website using
           React and styled-components.
         </Item>
       </div>
