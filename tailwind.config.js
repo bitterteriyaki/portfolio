@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: ['**/pages/**/*.tsx', '**/components/**/*.tsx'],
   darkMode: 'class',
 };
+
+module.exports = config;
