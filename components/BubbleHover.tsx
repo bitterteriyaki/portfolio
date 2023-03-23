@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
-export default function BubbleHover() {
+function BubbleHover() {
   const [current, setCurrent] = useState<number>();
-  const classes = ['text-red-100', 'text-6xl', 'text-center', 'my-5'];
 
-  function mapSpans(char: string, index: number) {
-    const classes = ['duration-[50ms]'];
+  function mapChars(char: string, index: number) {
+    const classes = ['duration-100'];
 
     if (index === current) classes.push('font-extrabold');
     if (index - 1 === current || index + 1 === current)
@@ -28,7 +27,9 @@ export default function BubbleHover() {
   }
 
   const text = 'Pragmatic, efficient and flexible.';
-  const spans = text.split('').map(mapSpans);
+  const spans = text.split('').map(mapChars);
 
-  return <h1 className={classes.join(' ')}>{spans}</h1>;
+  return <h1 className="my-5 text-center text-6xl text-white">{spans}</h1>;
 }
+
+export default BubbleHover;

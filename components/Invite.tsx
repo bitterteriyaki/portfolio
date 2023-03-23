@@ -1,23 +1,23 @@
 import Link from 'next/link';
 
-export default function Invite() {
+function Invite() {
   const classes = [
-    'text-white',
+    'grid',
+    'grid-flow-col',
+    'place-items-center',
+    'gap-3',
     'border',
     'border-solid',
     'border-slate-400',
     'px-4',
     'py-3',
     'rounded-full',
-    'grid',
-    'grid-flow-col',
-    'place-items-center',
-    'gap-3',
-    'group',
     'bg-gradient-to-r',
-    'from-zinc-800',
-    'hover:bg-zinc-800',
+    'from-stone-900',
+    'hover:bg-zinc-900',
     'duration-200',
+    'text-white',
+    'group',
   ];
 
   return (
@@ -26,7 +26,7 @@ export default function Invite() {
       target="_blank"
       className={classes.join(' ')}
     >
-      <div className="rounded-full bg-green-800 px-2 py-2 opacity-90">
+      <div className="rounded-full bg-green-800 p-2 opacity-90">
         <i className="nf nf-dev-git_pull_request text-[22px] text-green-400"></i>
       </div>
       <div>
@@ -39,3 +39,5 @@ export default function Invite() {
     </Link>
   );
 }
+
+export default Invite;
