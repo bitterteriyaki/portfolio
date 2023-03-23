@@ -1,58 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap');
+@import url('https://www.nerdfonts.com/assets/css/combo.css');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Squada+One&display=swap');
 
-:root {
-  --header-size: 100px;
-
-  --charlie: #f7aef8;
-  --luna: #48bf84;
-  --oliver: #3772ff;
-  --olivia: #6190ff;
-  --loki: #ffe66d;
-  --willow: #f0f0f0;
-  --bella: #bfbfbf;
-  --milo: #545454;
-  --walter: #f7f7f7;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: var(--bella);
-  border: 3px solid var(--willow);
-  border-radius: 15px;
-}
-
-html, body {
-  background-color: var(--willow);
-  font-family: 'Inter', sans-serif;
-}
-
-a {
-  color: var(--oliver);
-  text-decoration: none;
-  transition: 0.1s linear;
-}
-
-a:hover {
-  color: var(--olivia);
-  text-decoration: underline;
-}
-
-code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14pt;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

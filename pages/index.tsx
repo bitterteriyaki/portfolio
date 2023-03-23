@@ -1,15 +1,21 @@
-import { NextPage } from 'next'
+import Head from 'next/head';
+import Hero from '../components/Hero';
+import Info from '../components/Info';
 
-import Introduction from '../components/Introduction'
-import Showcase from '../components/Showcase'
-
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <>
-      <Introduction />
-      <Showcase />
-    </>
-  )
-}
+      <Head>
+        <title>kyomi - Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-export default Home
+      <main>
+        <section>
+          <Hero />
+          <Info />
+        </section>
+      </main>
+    </>
+  );
+}
