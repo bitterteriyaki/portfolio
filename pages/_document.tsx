@@ -7,6 +7,10 @@ export default function Document() {
     'to-zinc-900',
     'font-["Inter"]',
     'cursor-default',
+    'scrollbar-thin',
+    'scrollbar-thumb-white',
+    'scrollbar-thumb-rounded-full',
+    'scrollbar-track-zinc-900',
   ];
 
   return (
