@@ -1,22 +1,23 @@
-import { useEffect, useState } from 'react';
+import { motion, useScroll } from 'framer-motion';
 
 function ScrollIndicator() {
-  const [offset, setOffset] = useState<number>(0);
-  const style = { width: `${offset}%` };
+  const { scrollYProgress } = useScroll();
+  const classes = [
+    'h-0.5',
+    'bg-white',
+    'fixed',
+    'top-0',
+    'left-0',
+    'right-0',
+    'origin-top-left',
+  ];
 
-  function handleScroll() {
-    const height = document.body.scrollHeight - window.innerHeight;
-    const percentage = (window.scrollY / height) * 100;
-
-    setOffset(percentage);
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  });
-
-  return <div className="fixed h-0.5 bg-white" style={style}></div>;
+  return (
+    <motion.div
+      className={classes.join(' ')}
+      style={{ scaleX: scrollYProgress }}
+    />
+  );
 }
 
 export default ScrollIndicator;
