@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import BubbleHover from '@/components/BubbleHover';
 import Invite from '@/components/Invite';
 import Card from '@/components/Card';
@@ -14,11 +15,16 @@ function Home() {
 
       <main>
         <section className="grid place-items-center">
-          <div className="flex h-screen flex-col items-center justify-center">
+          <div className="mb-4 flex h-screen flex-col items-center justify-center">
             <BubbleHover />
             <Invite />
           </div>
-          <div className="grid w-5/6 max-w-6xl grid-flow-col place-items-center gap-6">
+          <motion.div
+            className="grid w-5/6 max-w-6xl grid-flow-col place-items-center gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+          >
             <Card>
               <TerminalText text="whoami" />
               <p>
@@ -30,7 +36,7 @@ function Home() {
                 <b>functional and user-friendly</b>.
               </p>
             </Card>
-          </div>
+          </motion.div>
         </section>
       </main>
     </>
