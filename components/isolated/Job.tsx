@@ -53,7 +53,7 @@ const tagsInfo: Tags = {
     fancyName: 'PHP',
   },
   linux: {
-    color: '#f2c500',
+    color: '#ffffff',
     fancyName: 'Linux',
   },
 };
