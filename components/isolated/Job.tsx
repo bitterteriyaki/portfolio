@@ -101,7 +101,7 @@ function Job(props: JobProps) {
       <div className="grid gap-5">
         <div>
           <div className="flex items-center gap-2">
-            <h3 className="font-bold leading-loose">{props.title}</h3>
+            <h3 className="font-bold leading-none">{props.title}</h3>
             {tags}
           </div>
           <p className="text-xs">{props.company}</p>
