@@ -20,16 +20,44 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+import Link from 'next/link';
 
-import ScrollIndicator from '@/components/isolated/ScrollIndicator';
+function GitHub() {
+  const github = 'https://github.com/bitterteriyaki';
+  const classes = [
+    'grid',
+    'grid-flow-col',
+    'place-items-center',
+    'gap-3',
+    'border',
+    'border-solid',
+    'border-slate-400',
+    'px-4',
+    'py-3',
+    'rounded-full',
+    'bg-gradient-to-r',
+    'from-stone-900',
+    'to-transparent',
+    'hover:bg-zinc-900',
+    'duration-200',
+    'text-white',
+    'group',
+  ];
 
-export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <ScrollIndicator />
-      <Component {...pageProps} />
-    </>
+    <Link href={github} target="_blank" className={classes.join(' ')}>
+      <div className="rounded-full bg-green-800 p-2 opacity-90">
+        <i className="nf nf-dev-git_pull_request text-[22px] text-green-400" />
+      </div>
+      <div>
+        <p className="font-bold">Do you want to see my work?</p>
+        <p className="text-slate-400">Click here to see my GitHub profile.</p>
+      </div>
+      <div className="duration-150 group-hover:translate-x-2">
+        <i className="nf nf-fa-arrow_right" />
+      </div>
+    </Link>
   );
 }
+
+export default GitHub;

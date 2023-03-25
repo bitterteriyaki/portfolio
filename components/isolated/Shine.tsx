@@ -20,16 +20,24 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+function Shine(props: { x: number; y: number }) {
+  const style = { transform: `translate(${props.x}px, ${props.y}px)` };
+  const classes = [
+    'bg-green-400',
+    'w-96',
+    'h-96',
+    'absolute',
+    'top-0',
+    'left-0',
+    'rounded-full',
+    'blur-[96px]',
+    'mix-blend-soft-light',
+    'opacity-0',
+    'group-hover:opacity-50',
+    'transition-opacity',
+  ];
 
-import ScrollIndicator from '@/components/isolated/ScrollIndicator';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <ScrollIndicator />
-      <Component {...pageProps} />
-    </>
-  );
+  return <div className={classes.join(' ')} style={style} />;
 }
+
+export default Shine;

@@ -20,16 +20,18 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+function Tag(props: { children: React.ReactNode; color: string }) {
+  const classes = [
+    props.color,
+    'border',
+    'border-solid',
+    'px-2',
+    'py-1',
+    'rounded-full',
+    'text-xs',
+  ];
 
-import ScrollIndicator from '@/components/isolated/ScrollIndicator';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <ScrollIndicator />
-      <Component {...pageProps} />
-    </>
-  );
+  return <span className={classes.join(' ')}>{props.children}</span>;
 }
+
+export default Tag;

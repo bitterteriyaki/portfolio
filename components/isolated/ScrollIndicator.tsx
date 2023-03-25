@@ -20,16 +20,26 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+import { motion, useScroll } from 'framer-motion';
 
-import ScrollIndicator from '@/components/isolated/ScrollIndicator';
+function ScrollIndicator() {
+  const { scrollYProgress } = useScroll();
+  const classes = [
+    'h-0.5',
+    'bg-white',
+    'fixed',
+    'top-0',
+    'left-0',
+    'right-0',
+    'origin-top-left',
+  ];
 
-export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <ScrollIndicator />
-      <Component {...pageProps} />
-    </>
+    <motion.div
+      className={classes.join(' ')}
+      style={{ scaleX: scrollYProgress }}
+    />
   );
 }
+
+export default ScrollIndicator;

@@ -20,16 +20,25 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+import BubbleHover from '../isolated/BubbleHover';
+import GitHub from '../isolated/GitHub';
 
-import ScrollIndicator from '@/components/isolated/ScrollIndicator';
+function Hero() {
+  const classes = [
+    'h-screen',
+    'flex',
+    'flex-col',
+    'items-center',
+    'justify-center',
+    'gap-10',
+  ];
 
-export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <ScrollIndicator />
-      <Component {...pageProps} />
-    </>
+    <section className={classes.join(' ')}>
+      <BubbleHover>Pragmatic, efficient and flexible.</BubbleHover>
+      <GitHub />
+    </section>
   );
 }
+
+export default Hero;

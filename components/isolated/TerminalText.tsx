@@ -20,16 +20,41 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+import { useEffect, useState } from 'react';
 
-import ScrollIndicator from '@/components/isolated/ScrollIndicator';
+function TerminalText(props: { text: string }) {
+  const original = props.text;
+  const [text, setText] = useState('');
+  const [typing, setTyping] = useState<boolean>(true);
 
-export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (typing === true && text !== original) {
+        setText(original.slice(0, text.length + 1));
+      } else if (typing === true && text === original) {
+        setTimeout(() => setTyping(false), 2500);
+      } else if (typing === false && text !== '') {
+        setText(original.slice(0, text.length - 1));
+      } else {
+        setTimeout(() => setTyping(true), 1500);
+      }
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, [text, typing, original]);
+
   return (
-    <>
-      <ScrollIndicator />
-      <Component {...pageProps} />
-    </>
+    <p className="mb-3">
+      <code className="bg-inherit text-2xl">
+        <span className="text-emerald-300">
+          guest
+          <i className="nf nf-md-chevron_right" />
+        </span>
+        <span>{text}</span>
+        <span className="animate-pulse">|</span>
+      </code>
+    </p>
   );
 }
+
+export default TerminalText;

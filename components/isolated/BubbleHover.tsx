@@ -20,16 +20,39 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+import { useState } from 'react';
 
-import ScrollIndicator from '@/components/isolated/ScrollIndicator';
+function BubbleHover(props: { children: React.ReactNode }) {
+  const [current, setCurrent] = useState<number>();
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <ScrollIndicator />
-      <Component {...pageProps} />
-    </>
-  );
+  function mapChars(char: string, index: number) {
+    const classes = ['duration-100'];
+
+    if (index === current) classes.push('font-extrabold');
+    if (index - 1 === current || index + 1 === current)
+      classes.push('font-bold');
+    if (index - 2 === current || index + 2 === current)
+      classes.push('font-semibold');
+    if (index - 3 === current || index + 3 === current)
+      classes.push('font-medium');
+
+    return (
+      <span
+        key={index}
+        onMouseOver={() => setCurrent(index)}
+        onMouseLeave={() => setCurrent(undefined)}
+        className={classes.join(' ')}
+      >
+        {char}
+      </span>
+    );
+  }
+
+  // Property 'children' can be undefined, so we need to check it.
+  const text = props.children?.toString() || '';
+  const spans = text.split('').map(mapChars);
+
+  return <h2 className="text-center text-6xl text-white">{spans}</h2>;
 }
+
+export default BubbleHover;
