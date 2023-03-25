@@ -96,8 +96,8 @@ function FAQ() {
             >
               Features development, bug fixes and code refactoring for a
               platform using PHP and some HTML and CSS (with Bootstrap). Code
-              improvements like creating automated tests and documentation have
-              also been improved.
+              improvements were also made such as the addition of automated
+              tests and documentation.
             </Job>
           </div>
         </div>
