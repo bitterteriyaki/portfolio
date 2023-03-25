@@ -32,30 +32,12 @@ type Tags = {
 };
 
 const tagsInfo: Tags = {
-  python: {
-    color: '#4584b6',
-    fancyName: 'Python',
-  },
-  git: {
-    color: '#f34f29',
-    fancyName: 'Git',
-  },
-  pandas: {
-    color: '#ffca00',
-    fancyName: 'Pandas',
-  },
-  postgresql: {
-    color: '#008bb9',
-    fancyName: 'PostgreSQL',
-  },
-  php: {
-    color: '#aeb2d5',
-    fancyName: 'PHP',
-  },
-  linux: {
-    color: '#ffffff',
-    fancyName: 'Linux',
-  },
+  python: { color: '#4584b6', fancyName: 'Python' },
+  git: { color: '#f34f29', fancyName: 'Git' },
+  pandas: { color: '#ffca00', fancyName: 'Pandas' },
+  postgresql: { color: '#008bb9', fancyName: 'PostgreSQL' },
+  php: { color: '#aeb2d5', fancyName: 'PHP' },
+  linux: { color: '#ffffff', fancyName: 'Linux' },
 };
 
 type JobProps = {
