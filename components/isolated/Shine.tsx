@@ -23,7 +23,7 @@
 function Shine(props: { x: number; y: number }) {
   const style = { transform: `translate(${props.x}px, ${props.y}px)` };
   const classes = [
-    'bg-green-400',
+    'bg-zinc-400',
     'w-96',
     'h-96',
     'absolute',
