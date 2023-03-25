@@ -24,8 +24,10 @@ function Shine(props: { x: number; y: number }) {
   const style = { transform: `translate(${props.x}px, ${props.y}px)` };
   const classes = [
     'bg-zinc-400',
-    'w-96',
-    'h-96',
+    'md:w-96',
+    'md:h-96',
+    'w-48',
+    'h-48',
     'absolute',
     'top-0',
     'left-0',
