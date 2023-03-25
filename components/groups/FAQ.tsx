@@ -34,12 +34,12 @@ function FAQ() {
     <section className={classes.join(' ')}>
       {/* FAQ Title */}
       <motion.div
-        className="grid place-items-center"
+        className="grid place-items-center gap-2"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.15 }}
       >
-        <h2 className="text-center text-4xl font-bold leading-normal text-white">
+        <h2 className="text-center text-4xl font-bold leading-none text-white">
           Frequently Asked Questions
         </h2>
         <div className="flex gap-2">
