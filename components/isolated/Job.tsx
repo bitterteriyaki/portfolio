@@ -77,7 +77,8 @@ function Job(props: JobProps) {
     'bg-zinc-900',
     'hover:bg-zinc-800',
     'duration-150',
-    'hover:translate-x-2',
+    'max-md:hover:-translate-y-1',
+    'md:hover:translate-x-2',
     'ease-out',
   ];
 
