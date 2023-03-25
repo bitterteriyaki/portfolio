@@ -25,7 +25,7 @@ function TerminalText(props: { text: string }) {
   }, [text, typing]);
 
   return (
-    <h2 className="mb-4">
+    <h3 className="mb-4">
       <code className="bg-inherit text-2xl">
         <span className="mr-2 text-emerald-300">
           guest
@@ -34,7 +34,7 @@ function TerminalText(props: { text: string }) {
         <span>{text}</span>
         <span className="animate-pulse">|</span>
       </code>
-    </h2>
+    </h3>
   );
 }
 

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Shine from './Shine';
 
@@ -46,14 +47,17 @@ function Card(props: { children: React.ReactNode }) {
   }
 
   return (
-    <div
+    <motion.div
       className={classes.join(' ')}
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseOut}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.1 }}
     >
       {props.children}
       <Shine x={coords.x} y={coords.y} />
-    </div>
+    </motion.div>
   );
 }
 
