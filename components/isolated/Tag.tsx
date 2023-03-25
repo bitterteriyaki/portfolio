@@ -21,8 +21,8 @@
  */
 
 function Tag(props: { children: React.ReactNode; color: string }) {
+  const style = { color: props.color };
   const classes = [
-    props.color,
     'border',
     'border-solid',
     'px-2',
@@ -31,7 +31,11 @@ function Tag(props: { children: React.ReactNode; color: string }) {
     'text-xs',
   ];
 
-  return <span className={classes.join(' ')}>{props.children}</span>;
+  return (
+    <span className={classes.join(' ')} style={style}>
+      {props.children}
+    </span>
+  );
 }
 
 export default Tag;

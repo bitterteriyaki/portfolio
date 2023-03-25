@@ -85,7 +85,7 @@ function Job(props: JobProps) {
     const color = tagsInfo[tag].color;
     const fancyName = tagsInfo[tag].fancyName;
     return (
-      <Tag key={index} color={`text-[${color}]`}>
+      <Tag key={index} color={color}>
         {fancyName}
       </Tag>
     );
