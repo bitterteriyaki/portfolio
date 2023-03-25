@@ -34,7 +34,7 @@ function Home() {
       </Head>
 
       <main className="flex justify-center">
-        <div className="grid w-5/6 max-w-7xl gap-1">
+        <div className="grid w-11/12 max-w-7xl gap-1 md:w-5/6">
           <Hero />
           <FAQ />
         </div>
