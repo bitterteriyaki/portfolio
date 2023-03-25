@@ -21,7 +21,7 @@
  */
 
 function Tag(props: { children: React.ReactNode; color: string }) {
-  const style = { color: props.color };
+  const style = { color: props.color, backgroundColor: `${props.color}15` };
   const classes = [
     'border',
     'border-solid',
