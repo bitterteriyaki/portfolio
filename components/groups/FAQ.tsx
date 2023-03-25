@@ -43,8 +43,8 @@ function FAQ() {
           Frequently Asked Questions
         </h2>
         <div className="flex gap-2">
-          <Tag color="text-emerald-500">About Me</Tag>
-          <Tag color="text-rose-400">Career</Tag>
+          <Tag color="#10b981">About Me</Tag>
+          <Tag color="#fb7185">Career</Tag>
         </div>
       </motion.div>
 
