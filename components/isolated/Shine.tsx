@@ -35,7 +35,7 @@ function Shine(props: { x: number; y: number }) {
     'blur-[96px]',
     'mix-blend-soft-light',
     'opacity-0',
-    'group-hover:opacity-50',
+    'group-hover:opacity-80',
     'transition-opacity',
   ];
 
