@@ -24,8 +24,27 @@ import { motion } from 'framer-motion';
 
 import Card3D from '../isolated/Card3D';
 import Job from '../isolated/Job';
+import Project from '../isolated/Project';
 import Tag from '../isolated/Tag';
 import TerminalText from '../isolated/TerminalText';
+
+function SectionTitle(props: { children: React.ReactNode }) {
+  return <h3 className="text-3xl font-bold text-white">{props.children}</h3>;
+}
+
+function Code(props: { children: React.ReactNode }) {
+  const classes = [
+    'px-0.5',
+    'rounded-sm',
+    'bg-neutral-700',
+    'border',
+    'border-solid',
+    'border-neutral-600',
+    'text-xs',
+  ];
+
+  return <code className={classes.join(' ')}>{props.children}</code>;
+}
 
 function FAQ() {
   const classes = ['grid', 'place-items-center', 'gap-10'];
@@ -43,8 +62,8 @@ function FAQ() {
           Frequently Asked Questions
         </h2>
         <div className="flex gap-2">
-          <Tag color="#10b981">About Me</Tag>
-          <Tag color="#fb7185">Career</Tag>
+          <Tag type="aboutMe" />
+          <Tag type="career" />
         </div>
       </motion.div>
 
@@ -69,12 +88,12 @@ function FAQ() {
 
       {/* Career */}
       <motion.div
-        className="mb-5 grid place-items-center gap-5"
+        className="grid place-items-center gap-5"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.15 }}
       >
-        <h3 className="text-3xl font-bold text-white">Career</h3>
+        <SectionTitle>Career</SectionTitle>
         <div className="flex max-w-lg gap-5">
           <div className="hidden w-1 bg-gradient-to-b from-transparent via-white to-slate-400 md:block" />
           <div className="grid place-items-center gap-5">
@@ -100,6 +119,39 @@ function FAQ() {
               tests and documentation.
             </Job>
           </div>
+        </div>
+      </motion.div>
+
+      {/* My Projects */}
+      <motion.div
+        className="mb-5 grid place-items-center gap-5"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.15 }}
+      >
+        <SectionTitle>Projects</SectionTitle>
+        <div className="flex max-w-lg gap-5">
+          <div className="grid place-items-center gap-5">
+            <Project
+              title="UnBot"
+              tags={['python', 'docker', 'discordBot']}
+              repositoryName="unbot"
+            >
+              A bot that notifies a Discord channel when some of the websites of
+              the University of Brasilia (SIGAA and Aprender3) are down.
+            </Project>
+            <Project
+              title="Portfolio"
+              tags={['typescript', 'nextjs', 'tailwindcss', 'website']}
+              repositoryName="portfolio"
+            >
+              This website! It&apos;s a work in progress, but I&apos;m trying to
+              make it as good as possible. I&apos;m using Next.js, TypeScript
+              and TailwindCSS. I&apos;m also using <Code>framer-motion</Code>{' '}
+              for animations.
+            </Project>
+          </div>
+          <div className="hidden w-1 bg-gradient-to-b from-transparent via-white to-slate-400 md:block" />
         </div>
       </motion.div>
     </section>

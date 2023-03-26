@@ -51,7 +51,9 @@ function GitHub() {
       </div>
       <div>
         <p className="font-bold">Do you want to see my work?</p>
-        <p className="text-slate-400">Click here to see my GitHub profile.</p>
+        <p className="text-xs text-slate-400 md:text-base">
+          Click here to see my GitHub profile.
+        </p>
       </div>
       <div className="duration-150 group-hover:translate-x-2">
         <i className="nf nf-fa-arrow_right" />

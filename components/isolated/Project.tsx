@@ -21,21 +21,20 @@
  */
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 import Tag from './Tag';
 import type { TagType } from './Tag';
 
-type JobProps = {
+type ProjectProps = {
   children: React.ReactNode;
   title: string;
   tags: TagType[];
-  company: string;
-  duration: string;
+  repositoryName: string;
 };
 
-function Job(props: JobProps) {
+function Project(props: ProjectProps) {
   const classes = [
-    'text-white',
     'border',
     'border-solid',
     'border-zinc-700',
@@ -46,11 +45,14 @@ function Job(props: JobProps) {
     'hover:bg-zinc-800',
     'duration-150',
     'max-md:hover:-translate-y-1',
-    'md:hover:translate-x-2',
+    'md:hover:-translate-x-2',
     'ease-out',
   ];
 
-  const tags = props.tags.map((tag, index) => <Tag key={index} type={tag} />);
+  const url = `https://github.com/bitterteriyaki/${props.repositoryName}`;
+  const tags = props.tags.map((tag, index) => {
+    return <Tag key={index} type={tag} />;
+  });
 
   return (
     <motion.div
@@ -60,18 +62,23 @@ function Job(props: JobProps) {
       transition={{ delay: 0.25 }}
     >
       <div className="grid gap-5">
-        <div>
-          <div className="flex items-center gap-1 md:gap-2">
-            <h3 className="font-bold leading-none">{props.title}</h3>
-            {tags}
-          </div>
-          <p className="text-xs">{props.company}</p>
-          <p className="text-xs">{props.duration}</p>
+        <div className="flex items-center gap-1 md:gap-2">
+          <h3 className="font-bold leading-none text-white">{props.title}</h3>
+          {tags}
         </div>
-        <p className="leading-5">{props.children}</p>
+        <p className="leading-5 text-white">{props.children}</p>
+        <div>
+          <Link
+            className="text-green-300 duration-100 hover:text-green-200 hover:underline"
+            href={url}
+            target="_blank"
+          >
+            Check repository <i className="nf nf-md-arrow_right"></i>
+          </Link>
+        </div>
       </div>
     </motion.div>
   );
 }
 
-export default Job;
+export default Project;

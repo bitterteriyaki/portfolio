@@ -20,22 +20,52 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-function Tag(props: { children: React.ReactNode; color: string }) {
-  const style = { color: props.color, backgroundColor: `${props.color}15` };
+const tagsInfo = {
+  // Languages
+  python: { color: '#4584b6', fancyName: 'Python' },
+  git: { color: '#f34f29', fancyName: 'Git' },
+  pandas: { color: '#ffca00', fancyName: 'Pandas' },
+  postgresql: { color: '#008bb9', fancyName: 'PostgreSQL' },
+  php: { color: '#aeb2d5', fancyName: 'PHP' },
+  linux: { color: '#ffffff', fancyName: 'Linux' },
+  typescript: { color: '#3178c6', fancyName: 'TypeScript' },
+
+  // Frameworks
+  nextjs: { color: '#ffffff', fancyName: 'Next.js' },
+  tailwindcss: { color: '#38bdf8', fancyName: 'Tailwind' },
+
+  // DevOps
+  docker: { color: '#0db7ed', fancyName: 'Docker' },
+
+  // Other stuff
+  aboutMe: { color: '#10b981', fancyName: 'About Me' },
+  career: { color: '#fb7185', fancyName: 'Career' },
+  discordBot: { color: '#7289da', fancyName: 'Discord Bot' },
+  website: { color: '#f59e0b', fancyName: 'Website' },
+};
+
+type TagType = keyof typeof tagsInfo;
+
+function Tag(props: { type: TagType }) {
+  const info = tagsInfo[props.type];
+  const style = { color: info.color, backgroundColor: `${info.color}15` };
+
   const classes = [
     'border',
     'border-solid',
     'px-2',
     'py-1',
     'rounded-full',
-    'text-xs',
+    'text-[10px]',
+    'md:text-xs',
   ];
 
   return (
     <span className={classes.join(' ')} style={style}>
-      {props.children}
+      {info.fancyName}
     </span>
   );
 }
 
+export type { TagType };
 export default Tag;
