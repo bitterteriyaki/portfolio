@@ -32,6 +32,7 @@ function ScrollIndicator() {
     'left-0',
     'right-0',
     'origin-top-left',
+    'z-10',
   ];
 
   return (
