@@ -150,6 +150,15 @@ function FAQ() {
               and TailwindCSS. I&apos;m also using <Code>framer-motion</Code>{' '}
               for animations.
             </Project>
+            <Project
+              title="Academic projects"
+              tags={['python', 'java', 'c', 'cpp']}
+              organizationName="unb-academic"
+            >
+              My academic exercises. For a better overview, I created an
+              organization on GitHub just for them. All my projects are open
+              source and under the MIT license.
+            </Project>
           </div>
           <div className="hidden w-1 bg-gradient-to-b from-transparent via-white to-slate-400 md:block" />
         </div>

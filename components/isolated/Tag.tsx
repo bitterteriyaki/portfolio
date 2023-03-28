@@ -29,6 +29,9 @@ const tagsInfo = {
   php: { color: '#aeb2d5', fancyName: 'PHP' },
   linux: { color: '#ffffff', fancyName: 'Linux' },
   typescript: { color: '#3178c6', fancyName: 'TypeScript' },
+  java: { color: '#ed8b00', fancyName: 'Java' },
+  c: { color: '#a8b9cc', fancyName: 'C' },
+  cpp: { color: '#6388c5', fancyName: 'C++' },
 
   // Frameworks
   nextjs: { color: '#ffffff', fancyName: 'Next.js' },

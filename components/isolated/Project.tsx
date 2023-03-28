@@ -30,7 +30,8 @@ type ProjectProps = {
   children: React.ReactNode;
   title: string;
   tags: TagType[];
-  repositoryName: string;
+  repositoryName?: string;
+  organizationName?: string;
 };
 
 function Project(props: ProjectProps) {
@@ -49,7 +50,11 @@ function Project(props: ProjectProps) {
     'ease-out',
   ];
 
-  const url = `https://github.com/bitterteriyaki/${props.repositoryName}`;
+  const endpoint =
+    props.organizationName || `bitterteriyaki/${props.repositoryName}`;
+  const term = props.organizationName ? 'organization' : 'repository';
+
+  const url = `https://github.com/${endpoint}`;
   const tags = props.tags.map((tag, index) => {
     return <Tag key={index} type={tag} />;
   });
@@ -73,7 +78,7 @@ function Project(props: ProjectProps) {
             href={url}
             target="_blank"
           >
-            Check repository <i className="nf nf-md-arrow_right"></i>
+            Check {term} <i className="nf nf-md-arrow_right"></i>
           </Link>
         </div>
       </div>
