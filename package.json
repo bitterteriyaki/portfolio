@@ -15,5 +15,9 @@
     "nuxt": "^3.10.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/eslint-module": "^4.1.0"
   }
 }
