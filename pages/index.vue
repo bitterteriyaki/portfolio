@@ -1,3 +1,3 @@
 <template>
-  <p>Welcome to my portfolio.</p>
+  <Hero />
 </template>

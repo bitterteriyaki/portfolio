@@ -1,0 +1,30 @@
+<template>
+  <Container
+    class="
+      h-dvh
+      flex
+      flex-col
+      items-center
+      justify-center
+      gap-2
+    "
+  >
+    <h1 class="text-5xl font-black text-center">
+      <span>
+        let me turn your<br>ideas into a
+      </span>
+      <span
+        class="
+          bg-gradient-to-r
+          from-green-400
+          via-slate-400
+          to-pink-400
+          text-transparent
+          bg-clip-text
+        "
+      >
+        reality
+      </span>
+    </h1>
+  </Container>
+</template>

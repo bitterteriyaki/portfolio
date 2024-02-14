@@ -11,12 +11,17 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@nuxtjs/google-fonts',
     '@nuxtjs/robots',
-    '@nuxt/image',
     '@nuxt/content',
     'nuxt-icon',
   ],
   css: [
     '@/assets/css/main.scss',
+  ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
   ],
   eslint: {
     lintOnStart: false,
@@ -24,10 +29,13 @@ export default defineNuxtConfig({
   googleFonts: {
     display: 'swap',
     download: true,
-    families: { 'DM+Sans': [400, 500, 600, 700] },
+    families: {
+      'DM+Sans': [400, 500, 600, 700],
+      'JetBrains+Mono': [400, 500, 600, 700],
+    },
   },
   colorMode: {
-    preference: 'light',
+    preference: 'dark',
     fallback: 'system',
     classSuffix: '',
   },
