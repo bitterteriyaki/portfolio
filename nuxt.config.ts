@@ -1,17 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+  },
   modules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/sitemap',
-    '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/device',
     '@nuxtjs/google-fonts',
     '@nuxtjs/robots',
-    'nuxt-icon',
+    '@nuxt/image',
     '@nuxt/content',
+    'nuxt-icon',
+  ],
+  css: [
+    '@/assets/css/main.scss',
   ],
   eslint: {
     lintOnStart: false,
@@ -20,5 +25,10 @@ export default defineNuxtConfig({
     display: 'swap',
     download: true,
     families: { 'DM+Sans': [400, 500, 600, 700] },
+  },
+  colorMode: {
+    preference: 'light',
+    fallback: 'system',
+    classSuffix: '',
   },
 })
