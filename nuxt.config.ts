@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     download: true,
     families: {
       'DM+Sans': [400, 500, 600, 700],
-      'JetBrains+Mono': [400, 500, 600, 700],
+      'Inter': [400, 500, 600, 700],
     },
   },
   colorMode: {
