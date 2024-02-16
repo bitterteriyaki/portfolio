@@ -6,25 +6,58 @@
       flex-col
       items-center
       justify-center
-      gap-2
+      gap-10
+      md:grid
+      md:grid-flow-col
     "
   >
-    <h1 class="text-5xl font-black text-center">
-      <span>
-        let me turn your<br>ideas into a
-      </span>
-      <span
+    <Container
+      class="
+        flex
+        items-center
+      "
+    >
+      <h1
         class="
-          bg-gradient-to-r
-          from-green-400
-          via-slate-400
-          to-pink-400
-          text-transparent
-          bg-clip-text
+          text-5xl
+          font-black
+          text-center
+          md:text-left
+      "
+    >
+        <span>
+          Let me turn your<br>ideas into
+        </span>
+        <span
+          class="
+            bg-gradient-to-r
+            from-blue-400
+            to-pink-400
+            text-transparent
+            bg-clip-text
+          "
+        >
+          reality
+        </span>
+      </h1>
+    </Container>
+    <Container
+      class="
+        flex
+        items-center
+      "
+    >
+      <p
+        class="
+          max-w-lg
+          text-slate-300
+          text-center
+          md:text-left
         "
       >
-        reality
-      </span>
-    </h1>
+        Hello! My name is kyomi. I am a Brazilian full-stack developer studying
+        software engineering at the University of Brasília.
+      </p>
+    </Container>
   </Container>
 </template>
