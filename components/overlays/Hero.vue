@@ -1,7 +1,7 @@
 <template>
   <Container
     class="
-      h-dvh
+      md:h-dvh
       flex
       flex-col
       items-center
@@ -11,7 +11,7 @@
       md:grid-flow-col
     "
   >
-    <Container class="flex items-center">
+    <Container class="flex items-center h-dvh">
       <h1
         class="
           text-5xl
@@ -57,7 +57,7 @@
         </HeroText>
       </Container>
 
-      <div class="flex justify-center gap-2">
+      <div class="flex flex-col items-center md:flex-row justify-center gap-2">
         <Badge to="/blog">Take a look at my new blog</Badge>
         <Badge to="/pdfs/resume.pdf">Get my resume</Badge>
       </div>

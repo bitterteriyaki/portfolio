@@ -6,12 +6,17 @@
       text-xs
       border
       border-blue-400
-      text-blue-200
       bg-blue-400
+      text-blue-200
+      hover:border-blue-300
+      hover:bg-blue-300
+      hover:text-blue-100
+      hover:bg-opacity-20
       bg-opacity-10
       rounded-full
       flex
       items-center
+      transition-colors
     "
     :to="to"
   >
