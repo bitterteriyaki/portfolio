@@ -1,3 +1,3 @@
 <template>
-  <NuxtWelcome />
+  <p>Hello world!</p>
 </template>
