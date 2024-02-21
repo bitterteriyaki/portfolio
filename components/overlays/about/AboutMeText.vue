@@ -1,10 +1,10 @@
 <template>
   <p
     class="
+      text-center
+      sm:text-left
       max-w-lg
       text-slate-400
-      text-center
-      md:text-left
     "
   >
     <slot />

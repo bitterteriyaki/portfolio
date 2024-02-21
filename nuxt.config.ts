@@ -1,42 +1,36 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: {
-    enabled: true,
-  },
+  devtools: { enabled: true },
+  css: ['@/assets/css/main.sass'],
+  components: [{ path: '~/components', pathPrefix: false }],
   modules: [
+    '@nuxt/image',
+    '@nuxt/test-utils/module',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
-    '@nuxtjs/device',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/robots',
-    '@nuxt/content',
+    '@nuxtjs/device',
     'nuxt-icon',
   ],
-  css: [
-    '@/assets/css/main.scss',
-  ],
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-    },
-  ],
-  eslint: {
-    lintOnStart: false,
+  eslint: { lintOnStart: false },
+  device: { refreshOnResize: true },
+  colorMode: {
+    preference: 'dark',
+    fallback: 'system',
+    classSuffix: '',
   },
   googleFonts: {
     display: 'swap',
     download: true,
     families: {
-      'DM+Sans': [400, 500, 600, 700],
       'Inter': [400, 500, 600, 700],
+      'DM+Sans': [400, 500, 600, 700],
     },
   },
-  colorMode: {
-    preference: 'dark',
-    fallback: 'system',
-    classSuffix: '',
+  image: {
+    format: ['webp', 'png'],
+    domains: ['github.com'],
+    alias: { github: 'https://github.com' },
   },
 })

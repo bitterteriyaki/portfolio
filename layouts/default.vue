@@ -1,13 +1,5 @@
 <template>
-  <div>
-    <main>
-      <slot />
-    </main>
-  </div>
+  <main>
+    <slot />
+  </main>
 </template>
-
-<style>
-:root {
-  --header-height: 4rem;
-}
-</style>

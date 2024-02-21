@@ -1,0 +1,69 @@
+name: 🗃 CI
+
+on:
+  push:
+  pull_request:
+    types:
+      - reopened
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: 🧪 Test the application
+    strategy:
+      max-parallel: 4
+      matrix:
+        node-version: ['18.19.0']
+    steps:
+      - name: 📂 Checkout repository
+        uses: actions/checkout@v3
+      - name: 📦 Install Node.js (${{ matrix.node-version }})
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: 🎏 Enable corepack
+        run: corepack enable
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: 📦 Install Chromium
+        run: pnpm exec playwright-core install chromium
+      - name: 🧪 Run tests
+        run: |
+          pnpm run dev:prepare
+          pnpm run test
+          pnpm run lint
+  upload:
+    runs-on: ubuntu-latest
+    name: 📈 Upload coverage report
+    strategy:
+      max-parallel: 4
+      matrix:
+        node-version: ['18.19.0']
+    steps:
+      - name: 📂 Checkout repository
+        uses: actions/checkout@v3
+      - name: 📦 Install Node.js (${{ matrix.node-version }})
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: 🎏 Enable corepack
+        run: corepack enable
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: 📦 Install Chromium
+        run: pnpm exec playwright-core install chromium
+      - name: 📊 Generate coverage report
+        run: |
+          pnpm run dev:prepare
+          pnpm run coverage
+      - name: 📈 Upload coverage report to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: 📈 Upload coverage report to Code Climate
+        uses: paambaati/codeclimate-action@v5.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: pnpm run coverage
+          coverageLocations: coverage/cobertura-coverage.xml:cobertura
