@@ -10,9 +10,11 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/device',
     'nuxt-icon',
   ],
   eslint: { lintOnStart: false },
+  device: { refreshOnResize: true },
   colorMode: {
     preference: 'dark',
     fallback: 'system',

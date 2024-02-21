@@ -1,5 +1,8 @@
 <template>
-  <hero />
+  <div>
+    <hero />
+    <about-me />
+  </div>
 </template>
 
 <script setup lang="ts">

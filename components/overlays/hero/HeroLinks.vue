@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col sm:flex-row justify-center gap-2">
+  <div class="flex justify-center gap-2">
     <badge to="/pdfs/resume.pdf">
       Get my resume
     </badge>

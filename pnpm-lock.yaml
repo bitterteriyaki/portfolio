@@ -37,6 +37,9 @@ devDependencies:
   '@nuxtjs/color-mode':
     specifier: ^3.3.2
     version: 3.3.2
+  '@nuxtjs/device':
+    specifier: ^3.1.1
+    version: 3.1.1
   '@nuxtjs/eslint-module':
     specifier: ^4.1.0
     version: 4.1.0(eslint@8.56.0)(vite@5.1.1)(webpack@5.90.3)
@@ -1815,6 +1818,16 @@ packages:
       '@nuxt/kit': 3.10.1
       lodash.template: 4.5.0
       pathe: 1.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@nuxtjs/device@3.1.1:
+    resolution: {integrity: sha512-wHTziEevt1hdgePQwPhEedWW3COalhP0YGVB+sGLqSrKujX8vdz7lcBFB01KIftpaP8kY5H8pssibNaJbxGcYw==}
+    dependencies:
+      '@nuxt/kit': 3.10.1
+      defu: 6.1.4
     transitivePeerDependencies:
       - rollup
       - supports-color
