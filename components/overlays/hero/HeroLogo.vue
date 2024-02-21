@@ -1,0 +1,44 @@
+<template>
+  <div
+    class="
+      flex
+      flex-col
+      items-center
+      justify-center
+      gap-4
+    "
+  >
+    <nuxt-img
+      src="/github/bitterteriyaki.png"
+      class="
+        rounded-full
+        w-32
+        sm:w-40
+        md:w-52
+      "
+    />
+    <h1
+      class="
+        text-4xl
+        text-center
+        font-black
+        font-[Inter]
+      "
+    >
+      <span>
+        Let me turn your<br>ideas into
+      </span>
+      <span
+        class="
+          bg-gradient-to-r
+          from-blue-400
+          to-pink-400
+          text-transparent
+          bg-clip-text
+        "
+      >
+        reality
+      </span>
+    </h1>
+  </div>
+</template>

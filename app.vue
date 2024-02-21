@@ -1,3 +1,11 @@
 <template>
-  <p>Hello world!</p>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
+
+<script setup lang="ts">
+useHead({
+  titleTemplate: '%s | kyomi',
+})
+</script>
