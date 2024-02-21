@@ -16,6 +16,7 @@
         sm:w-40
         md:w-52
       "
+      placeholder
     />
     <h1
       class="
