@@ -25,6 +25,8 @@ jobs:
         run: corepack enable
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: 📦 Install Chromium
+        run: pnpm exec playwright-core install chromium
       - name: 🧪 Run tests
         run: |
           pnpm run dev:prepare
@@ -48,6 +50,8 @@ jobs:
         run: corepack enable
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: 📦 Install Chromium
+        run: pnpm exec playwright-core install chromium
       - name: 📊 Generate coverage report
         run: |
           pnpm run dev:prepare
