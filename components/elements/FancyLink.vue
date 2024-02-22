@@ -2,7 +2,7 @@
   <nuxt-link
     :to="to"
     target="_blank"
-    class="text-slate-100 underline"
+    class="text-slate-200 underline"
   >
     <slot />
   </nuxt-link>

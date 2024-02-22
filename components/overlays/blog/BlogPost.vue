@@ -35,7 +35,9 @@
               v-for="tag in post.tags"
               :key="tag"
               :tag="tag"
-            />
+            >
+              {{ tag }}
+            </tag>
           </div>
         </div>
         <p class="text-xs text-slate-400">
