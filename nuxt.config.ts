@@ -3,8 +3,21 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/css/main.sass'],
   components: [{ path: '~/components', pathPrefix: false }],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      htmlAttrs: {
+        lang: "en",
+        class: "h-full",
+      },
+      bodyAttrs: {
+        class: "antialiased bg-gray-50 dark:bg-black min-h-screen",
+      },
+    },
+  },
   modules: [
     '@nuxt/image',
+    '@nuxt/content',
     '@nuxt/test-utils/module',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
@@ -32,5 +45,10 @@ export default defineNuxtConfig({
     format: ['webp', 'png'],
     domains: ['github.com'],
     alias: { github: 'https://github.com' },
+  },
+  content: {
+    navigation: {
+      fields: ['coverImage', 'publishedAt'],
+    },
   },
 })

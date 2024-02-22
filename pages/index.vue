@@ -1,8 +1,11 @@
 <template>
-  <div>
+  <Container>
     <hero />
-    <about-me />
-  </div>
+    <div class="flex flex-col gap-20">
+      <about-me />
+      <latest-posts />
+    </div>
+  </Container>
 </template>
 
 <script setup lang="ts">

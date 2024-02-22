@@ -7,4 +7,5 @@ export default <Partial<Config>>{
       sans: ['DM Sans', 'DM Sans fallback', ...defaultFamily.fontFamily.sans],
     },
   },
+  plugins: [require('@tailwindcss/typography')],
 }
