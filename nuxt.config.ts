@@ -4,16 +4,7 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.sass'],
   components: [{ path: '~/components', pathPrefix: false }],
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
-    head: {
-      htmlAttrs: {
-        lang: "en",
-        class: "h-full",
-      },
-      bodyAttrs: {
-        class: "antialiased bg-gray-50 dark:bg-black min-h-screen",
-      },
-    },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: [
     '@nuxt/image',
