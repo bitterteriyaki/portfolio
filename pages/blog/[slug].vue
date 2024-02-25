@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-2xl py-32 sm:px-6 lg:px-8 px-4 flex flex-col gap-6">
+  <div class="mx-auto max-w-2xl sm:px-6 lg:px-8 px-4 flex flex-col gap-6">
     <content-doc v-slot="{ doc }">
       <nuxt-link :to="doc._path">
         <h1 class="text-4xl font-bold text-center underline text-slate-200">
@@ -43,3 +43,9 @@
     </content-doc>
   </div>
 </template>
+
+<script setup lang=ts>
+definePageMeta({
+  layout: 'blog',
+})
+</script>

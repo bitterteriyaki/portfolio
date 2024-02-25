@@ -3,9 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/css/main.sass'],
   components: [{ path: '~/components', pathPrefix: false }],
-  app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
-  },
   modules: [
     '@nuxt/image',
     '@nuxt/content',
