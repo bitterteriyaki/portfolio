@@ -44,7 +44,7 @@
           {{ post.publishedAt }}
         </p>
       </div>
-      <Icon
+      <icon
         name="heroicons:arrow-right-16-solid"
         size="26px"
         class="text-slate-400"
