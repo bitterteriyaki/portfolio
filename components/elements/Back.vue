@@ -13,7 +13,7 @@
       transition-colors
     "
   >
-    <Icon
+    <icon
       name="heroicons:arrow-left-circle"
       size="24px"
     />

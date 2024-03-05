@@ -12,9 +12,10 @@
       <back to="/blog" />
       <blog-path />
     </container>
-    <main>
+    <main class="py-10">
       <slot />
     </main>
+    <app-footer />
   </div>
 </template>
 

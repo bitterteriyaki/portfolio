@@ -22,7 +22,7 @@
     :to="to"
   >
     <slot />
-    <Icon
+    <icon
       name="heroicons:arrow-up-right-16-solid"
       size="16px"
     />
