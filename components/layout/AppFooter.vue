@@ -5,7 +5,7 @@
   >
     <div class="flex items-center">
       <div class="flex flex-col gap-1">
-        <h3 class="font-semibold text-slate-200">
+        <h3 class="font-bold text-slate-200">
           Social
         </h3>
         <ul class="flex gap-2">
@@ -27,7 +27,7 @@
         </ul>
       </div>
     </div>
-    <p class="text-slate-200">
+    <p class="text-slate-400">
       Made with ❤️ by kyomi
     </p>
   </container>
@@ -51,5 +51,9 @@ const medias = [
     name: 'twitter',
     link: 'https://twitter.com/bitterteriyaki',
   },
+  {
+    name: 'envelope-outline',
+    link: 'mailto:me@kyomi.dev',
+  }
 ]
 </script>
