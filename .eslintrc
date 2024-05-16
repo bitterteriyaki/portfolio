@@ -4,6 +4,9 @@
     "@nuxt/eslint-config"
   ],
   "rules": {
-    "max-len": "error"
+    "max-len": "error",
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "vue/no-multiple-template-root": "off"
   }
 }

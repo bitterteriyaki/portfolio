@@ -1,36 +1,37 @@
 <template>
-  <container
+  <Container
     as="footer"
-    class="h-28 flex items-center justify-between"
+    class="h-24 flex items-center justify-between"
   >
-    <div class="flex items-center">
-      <div class="flex flex-col gap-1">
-        <h3 class="font-bold text-slate-200">
-          Social
-        </h3>
-        <ul class="flex gap-2">
-          <li
-            v-for="media in medias"
-            :key="media.name"
+    <div class="flex flex-col gap-1">
+      <h3 class="font-black text-slate-200 text-lg">
+        Social
+      </h3>
+      <ul class="flex gap-1.5">
+        <li
+          v-for="media, idx in medias"
+          :key="idx"
+        >
+          <a
+            :href="media.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-slate-400 transition-colors hover:text-slate-300"
           >
-            <a
-              :href="media.link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <icon
-                :name="`mdi:${media.name}`"
-                class="w-6 h-6 text-slate-400"
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
+            <Icon
+              :name="
+                media.name === 'x' ? `ri:twitter-x-fill` : `mdi:${media.name}`
+              "
+              size="1.5rem"
+            />
+          </a>
+        </li>
+      </ul>
     </div>
     <p class="text-slate-400">
       Made with ❤️ by kyomi
     </p>
-  </container>
+  </Container>
 </template>
 
 <script setup lang="ts">
@@ -48,12 +49,12 @@ const medias = [
     link: 'https://instagram.com/bitterteriyaki',
   },
   {
-    name: 'twitter',
-    link: 'https://twitter.com/bitterteriyaki',
+    name: 'x',
+    link: 'https://x.com/bitterteriyaki',
   },
   {
     name: 'envelope-outline',
     link: 'mailto:me@kyomi.dev',
-  }
+  },
 ]
 </script>

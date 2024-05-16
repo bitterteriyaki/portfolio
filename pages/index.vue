@@ -1,10 +1,6 @@
 <template>
   <Container>
-    <hero />
-    <div class="flex flex-col gap-20">
-      <about-me />
-      <latest-posts />
-    </div>
+    <Hero />
   </Container>
 </template>
 

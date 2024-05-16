@@ -2,20 +2,17 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/css/main.sass'],
-  components: [{ path: '~/components', pathPrefix: false }],
+  components: [{ path: '@/components', pathPrefix: false }],
   modules: [
     '@nuxt/image',
-    '@nuxt/content',
-    '@nuxt/test-utils/module',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/device',
     'nuxt-icon',
   ],
+  // Modules configuration
   eslint: { lintOnStart: false },
-  device: { refreshOnResize: true },
   colorMode: {
     preference: 'dark',
     fallback: 'system',
@@ -25,18 +22,12 @@ export default defineNuxtConfig({
     display: 'swap',
     download: true,
     families: {
-      'Inter': [400, 500, 600, 700],
       'DM+Sans': [400, 500, 600, 700],
     },
   },
   image: {
-    format: ['webp', 'png'],
+    formats: ['webp', 'png'],
     domains: ['github.com'],
     alias: { github: 'https://github.com' },
-  },
-  content: {
-    navigation: {
-      fields: ['coverImage', 'publishedAt'],
-    },
   },
 })

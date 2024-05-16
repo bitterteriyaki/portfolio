@@ -8,7 +8,7 @@
       gap-4
     "
   >
-    <nuxt-img
+    <NuxtImg
       src="/github/bitterteriyaki.png"
       class="
         rounded-full
@@ -21,9 +21,7 @@
     <h1
       class="
         text-4xl
-        text-center
         font-black
-        font-[Inter]
       "
     >
       <span>
@@ -32,7 +30,7 @@
       <span
         class="
           bg-gradient-to-r
-          from-blue-400
+          from-blue-500
           to-pink-400
           text-transparent
           bg-clip-text

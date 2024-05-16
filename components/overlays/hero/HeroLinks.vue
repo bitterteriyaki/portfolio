@@ -1,10 +1,10 @@
 <template>
   <div class="flex justify-center gap-2">
-    <badge to="/pdfs/resume.pdf">
+    <Badge to="/pdfs/resume.pdf">
       Get my resume
-    </badge>
-    <badge to="/blog">
+    </Badge>
+    <Badge to="/blog">
       Take a look at my new blog
-    </badge>
+    </Badge>
   </div>
 </template>

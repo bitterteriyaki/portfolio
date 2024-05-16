@@ -1,14 +1,14 @@
 <template>
-  <nuxt-link
+  <NuxtLink
     class="
-      px-2
+      px-2.5
       py-1
-      text-xs
+      text-sm
       flex
-      justify-center
-      gap-1
+      items-center
+      gap-0.5
       rounded-full
-      border
+      border   
       border-blue-400
       bg-blue-400
       text-blue-200
@@ -22,11 +22,11 @@
     :to="to"
   >
     <slot />
-    <icon
-      name="heroicons:arrow-up-right-16-solid"
-      size="16px"
+    <Icon
+      name="heroicons:arrow-up-right-20-solid"
+      size="1rem"
     />
-  </nuxt-link>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">

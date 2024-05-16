@@ -1,5 +1,5 @@
 <template>
-  <container
+  <div
     class="
       flex
       flex-col
@@ -9,7 +9,7 @@
       gap-4
     "
   >
-    <hero-logo />
-    <hero-links />
-  </container>
+    <HeroIcon />
+    <HeroLinks />
+  </div>
 </template>
