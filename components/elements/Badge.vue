@@ -1,9 +1,9 @@
 <template>
   <NuxtLink
     class="
-      px-2.5
+      px-2
       py-1
-      text-sm
+      text-xs
       flex
       items-center
       gap-0.5
