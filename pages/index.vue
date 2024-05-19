@@ -1,6 +1,7 @@
 <template>
   <Container>
     <Hero />
+    <AboutMe />
   </Container>
 </template>
 
