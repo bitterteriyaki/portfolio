@@ -5,16 +5,19 @@
       flex
       flex-col
       gap-4
-      p-5
+      py-4
+      px-6
       max-w-xl
       rounded
       border-t
       border-t-transparent
-      transition-colors
+      transition-all
       hover:shadow-lg
       hover:border-t-gray-800
       hover:bg-gray-900
       hover:bg-opacity-70
+      hover:!opacity-100
+      group-hover/list:opacity-40
     "
     :to="job.url"
     target="_blank"
@@ -41,10 +44,18 @@
         {{ job.title }}
       </p>
     </div>
-    <div>
-      <p class="text-slate-400">
+    <div class="flex flex-col gap-3">
+      <p class="text-slate-400 text-sm">
         {{ job.description }}
       </p>
+      <div class="flex gap-2">
+        <Tag
+          v-for="tech, idx in job.techs"
+          :key="idx"
+        >
+          {{ tech }}
+        </Tag>
+      </div>
     </div>
   </NuxtLink>
 </template>

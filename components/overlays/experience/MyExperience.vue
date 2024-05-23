@@ -13,7 +13,7 @@
         to-50%
       " 
     />
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4 group/list">
       <ExperienceCard
         v-for="job, idx in jobs"
         :key="idx"
@@ -31,6 +31,7 @@ export type Job = {
   company: string
   description: string
   url: string
+  techs: string[]
 }
 
 const jobs: Job[] = [
@@ -43,10 +44,18 @@ const jobs: Job[] = [
       Development of new pages and features, fix bugs and vulnerabilities,
       creation of dashboards with Grafana, deployment of the application using
       Jenkins, and implementation of code improvements such as automated tests
-      and documentation. Utilized technologies such as PHP, HTML/CSS,
+      and documentation. Some of the technologies used were PHP, HTML/CSS,
       JavaScript, and PostgreSQL.
     `,
     url: `https://www.tecnisys.com.br`,
+    techs: [
+      'PHP',
+      'JavaScript',
+      'PostgreSQL',
+      'HTML/CSS',
+      'Grafana',
+      'Git',
+    ],
   },
   {
     title: 'Software Developer Intern',
@@ -57,10 +66,18 @@ const jobs: Job[] = [
       Development of an open-source linguistic ethnography tool to frame public
       opinion in mediatized groups. Responsibilities included analyzing
       messages, applying natural language processing (NLP), and displaying
-      charts and dashboards of group information. Utilized technologies such as
-      Python, Pandas, NumPy, Plotly, and spaCy.
+      charts and dashboards of group information. Some of the technologies used
+      were Python, Pandas, NumPy, Plotly, and spaCy.
     `,
     url: `https://ernestmanheim.com.br`,
+    techs: [
+      'Python',
+      'Pandas',
+      'NumPy',
+      'Plotly',
+      'spaCy',
+      'Git',
+    ],
   },
 ]
 </script>
