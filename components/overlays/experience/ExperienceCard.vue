@@ -5,10 +5,10 @@
       flex
       flex-col
       gap-4
-      py-4
+      py-5
       px-6
       max-w-xl
-      rounded
+      rounded-lg
       border-t
       border-t-transparent
       transition-all
