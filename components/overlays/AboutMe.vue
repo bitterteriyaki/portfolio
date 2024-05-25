@@ -16,7 +16,7 @@
       alt="Some 3D different objects"
       sizes="300px sm:400px md:500px"
     />
-    <div class="flex flex-col gap-4 max-w-xl">
+    <div class="flex flex-col gap-2 sm:gap-4 max-w-xl">
       <h2 class="text-4xl font-black">
         About Me
       </h2>

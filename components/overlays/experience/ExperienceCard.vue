@@ -5,13 +5,15 @@
       flex
       flex-col
       gap-4
-      py-5
-      px-6
-      max-w-xl
       rounded-lg
       border-t
       border-t-transparent
       transition-all
+      px-3
+      py-3
+      sm:max-w-xl
+      sm:py-5
+      sm:px-6
       hover:shadow-lg
       hover:border-t-gray-800
       hover:bg-gray-900
@@ -24,10 +26,10 @@
   >
     <div>
       <h3>
-        <span class="font-bold">
+        <span class="font-bold text-sm sm:text-base">
           {{ job.company }}
         </span>
-        <span class="text-sm">
+        <span class="text-xs sm:text-sm">
           ({{ job.startDate }} - {{ job.endDate }})
         </span>
         <Icon
@@ -40,15 +42,15 @@
           "
         />
       </h3>
-      <p class="text-slate-200">
+      <p class="text-slate-200 text-sm sm:text-base">
         {{ job.title }}
       </p>
     </div>
-    <div class="flex flex-col gap-3">
-      <p class="text-slate-400 text-sm">
+    <div class="flex flex-col gap-4 sm:gap-2">
+      <p class="text-slate-400 text-xs sm:text-sm">
         {{ job.description }}
       </p>
-      <div class="flex gap-2">
+      <div class="flex flex-wrap gap-1 sm:gap-2">
         <Tag
           v-for="tech, idx in job.techs"
           :key="idx"
@@ -68,4 +70,6 @@ defineProps({
     required: true,
   },
 })
+
+const { isDesktopOrTablet } = useDevice()
 </script>

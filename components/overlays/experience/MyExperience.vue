@@ -1,9 +1,20 @@
 <template>
-  <Container class="grid grid-flow-col place-content-center gap-8">
+  <div
+    class="
+      flex
+      flex-col
+      gap-4
+      sm:grid
+      sm:grid-flow-col
+      sm:place-content-center
+      sm:gap-8
+    "
+  >
     <h2 class="text-4xl font-black text-center">
       My Experience
     </h2>
     <div
+      v-if="isDesktopOrTablet"
       class="
         w-1
         rounded
@@ -11,7 +22,7 @@
         from-transparent
         to-slate-800
         to-50%
-      " 
+      "
     />
     <div class="flex flex-col gap-4 group/list">
       <ExperienceCard
@@ -20,7 +31,7 @@
         :job="job"
       />
     </div>
-  </Container>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -44,8 +55,7 @@ const jobs: Job[] = [
       Development of new pages and features, fix bugs and vulnerabilities,
       creation of dashboards with Grafana, deployment of the application using
       Jenkins, and implementation of code improvements such as automated tests
-      and documentation. Some of the technologies used were PHP, HTML/CSS,
-      JavaScript, and PostgreSQL.
+      and documentation.
     `,
     url: `https://www.tecnisys.com.br`,
     techs: [
@@ -66,8 +76,7 @@ const jobs: Job[] = [
       Development of an open-source linguistic ethnography tool to frame public
       opinion in mediatized groups. Responsibilities included analyzing
       messages, applying natural language processing (NLP), and displaying
-      charts and dashboards of group information. Some of the technologies used
-      were Python, Pandas, NumPy, Plotly, and spaCy.
+      charts and dashboards of group information.
     `,
     url: `https://ernestmanheim.com.br`,
     techs: [
@@ -80,4 +89,6 @@ const jobs: Job[] = [
     ],
   },
 ]
+
+const { isDesktopOrTablet } = useDevice()
 </script>
