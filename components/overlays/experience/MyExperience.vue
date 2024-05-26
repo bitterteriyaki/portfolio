@@ -64,6 +64,7 @@ const jobs: Job[] = [
       'PostgreSQL',
       'HTML/CSS',
       'Grafana',
+      'Jenkins',
       'Git',
     ],
   },

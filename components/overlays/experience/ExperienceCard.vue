@@ -4,16 +4,17 @@
       group
       flex
       flex-col
-      gap-4
-      rounded-lg
+      gap-2.5
       border-t
       border-t-transparent
       transition-all
-      px-3
-      py-3
-      sm:max-w-xl
-      sm:py-5
+      px-6
+      py-4
+      rounded-xl
       sm:px-6
+      sm:py-4
+      sm:max-w-xl
+      sm:rounded-lg
       hover:shadow-lg
       hover:border-t-gray-800
       hover:bg-gray-900
@@ -26,10 +27,10 @@
   >
     <div>
       <h3>
-        <span class="font-bold text-sm sm:text-base">
+        <span class="font-bold">
           {{ job.company }}
         </span>
-        <span class="text-xs sm:text-sm">
+        <span class="text-sm">
           ({{ job.startDate }} - {{ job.endDate }})
         </span>
         <Icon
@@ -42,22 +43,20 @@
           "
         />
       </h3>
-      <p class="text-slate-200 text-sm sm:text-base">
+      <p class="text-slate-200">
         {{ job.title }}
       </p>
     </div>
-    <div class="flex flex-col gap-4 sm:gap-2">
-      <p class="text-slate-400 text-xs sm:text-sm">
-        {{ job.description }}
-      </p>
-      <div class="flex flex-wrap gap-1 sm:gap-2">
-        <Tag
-          v-for="tech, idx in job.techs"
-          :key="idx"
-        >
-          {{ tech }}
-        </Tag>
-      </div>
+    <p class="text-slate-400 text-sm">
+      {{ job.description }}
+    </p>
+    <div class="flex flex-wrap gap-1 sm:gap-1.5">
+      <Tag
+        v-for="tech, idx in job.techs"
+        :key="idx"
+      >
+        {{ tech }}
+      </Tag>
     </div>
   </NuxtLink>
 </template>
