@@ -13,7 +13,7 @@
   >
     <NuxtImg
       src="/img/objects.png"
-      alt="Some 3D different objects"
+      alt="Some different 3D blue objects"
       sizes="300px sm:400px md:500px"
       placeholder
     />

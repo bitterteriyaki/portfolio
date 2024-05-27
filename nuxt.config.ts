@@ -12,6 +12,11 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     'nuxt-icon',
   ],
+  app: {
+    head: {
+      htmlAttrs: { lang: 'en' },
+    },
+  },
   // Modules configuration
   eslint: { lintOnStart: false },
   device: { refreshOnResize: true },

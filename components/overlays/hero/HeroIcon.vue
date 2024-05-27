@@ -10,12 +10,9 @@
   >
     <NuxtImg
       src="/github/bitterteriyaki.png"
-      class="
-        rounded-full
-        w-32
-        sm:w-40
-        md:w-52
-      "
+      class="rounded-full"
+      sizes="128px sm:160px md:208px"
+      alt="kyomi's avatar on GitHub"
       placeholder
     />
     <h1
