@@ -4,7 +4,7 @@
     class="h-24 flex items-center justify-between"
   >
     <div class="flex flex-col gap-1">
-      <h3 class="font-black text-slate-200 text-lg">
+      <h3 class="font-black text-slate-200 text-base sm:text-lg">
         Social
       </h3>
       <ul class="flex gap-1.5">
@@ -12,23 +12,29 @@
           v-for="media, idx in medias"
           :key="idx"
         >
-          <a
+          <NuxtLink
             :href="media.link"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-slate-400 transition-colors hover:text-slate-300"
+            class="
+              transition-colors
+              hover:text-slate-300
+              text-slate-400
+            "
           >
             <Icon
               :name="
-                media.name === 'x' ? `ri:twitter-x-fill` : `mdi:${media.name}`
+                media.name === 'x'
+                  ? `ri:twitter-x-fill`
+                  : `mdi:${media.name}`
               "
               size="1.5rem"
             />
-          </a>
+          </NuxtLink>
         </li>
       </ul>
     </div>
-    <p class="text-slate-400">
+    <p class="text-slate-400 text-sm sm:text-base">
       Made with ❤️ by kyomi
     </p>
   </Container>
