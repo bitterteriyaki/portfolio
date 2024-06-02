@@ -1,11 +1,22 @@
 <template>
-  <Container class="flex items-center justify-center gap-4">
+  <Container
+    class="
+      flex
+      items-center
+      justify-center
+      gap-4
+      flex-col
+      text-center
+      lg:text-left
+      lg:flex-row
+    "
+  >
     <NuxtImg
       src="/img/objects.png"
       alt="Some 3D different objects"
-      height="300px"
+      sizes="300px sm:400px md:500px"
     />
-    <div class="flex flex-col gap-4 max-w-xl">
+    <div class="flex flex-col gap-2 sm:gap-4 max-w-xl">
       <h2 class="text-4xl font-black">
         About Me
       </h2>

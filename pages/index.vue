@@ -1,7 +1,10 @@
 <template>
   <Container>
     <Hero />
-    <AboutMe />
+    <section class="flex flex-col gap-32">
+      <AboutMe />
+      <MyExperience />
+    </section>
   </Container>
 </template>
 
