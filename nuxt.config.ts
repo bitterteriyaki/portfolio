@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     'nuxt-icon',
   ],
+  routeRules: {
+    '/': { prerender: true },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
