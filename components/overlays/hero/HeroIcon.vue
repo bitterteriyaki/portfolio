@@ -11,9 +11,8 @@
     <NuxtImg
       src="/github/bitterteriyaki.png"
       class="rounded-full"
-      sizes="128px sm:160px md:208px"
+      sizes="130px sm:160px md:220px"
       alt="kyomi's avatar on GitHub"
-      placeholder
     />
     <h1
       class="

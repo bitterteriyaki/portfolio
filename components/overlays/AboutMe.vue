@@ -15,7 +15,6 @@
       src="/img/objects.png"
       alt="Some different 3D blue objects"
       sizes="300px sm:400px md:500px"
-      placeholder
     />
     <div class="flex flex-col gap-2 sm:gap-4 max-w-xl">
       <h2 class="text-4xl font-black">
