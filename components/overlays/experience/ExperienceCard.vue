@@ -69,6 +69,4 @@ defineProps({
     required: true,
   },
 })
-
-const { isDesktopOrTablet } = useDevice()
 </script>

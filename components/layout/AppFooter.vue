@@ -14,6 +14,7 @@
         >
           <NuxtLink
             :href="media.link"
+            :aria-label="media.ariaLabel"
             target="_blank"
             rel="noopener noreferrer"
             class="
@@ -45,22 +46,27 @@ const medias = [
   {
     name: 'github',
     link: 'https://github.com/bitterteriyaki',
+    ariaLabel: 'GitHub',
   },
   {
     name: 'linkedin',
     link: 'https://linkedin.com/in/bitterteriyaki',
+    ariaLabel: 'LinkedIn',
   },
   {
     name: 'instagram',
     link: 'https://instagram.com/bitterteriyaki',
+    ariaLabel: 'Instagram',
   },
   {
     name: 'x',
     link: 'https://x.com/bitterteriyaki',
+    ariaLabel: 'X',
   },
   {
     name: 'envelope-outline',
     link: 'mailto:me@kyomi.dev',
+    ariaLabel: 'Email',
   },
 ]
 </script>
