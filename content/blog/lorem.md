@@ -9,8 +9,7 @@ tags:
   - Vue
 ---
 
-Nisi sint laboris laboris in anim laboris ullamco. Labore cupidatat aliquip
-occaecat fugiat ex et duis. Consectetur ut mollit quis fugiat.
+This is a very basic description.
 
 Dolore sit ad pariatur deserunt veniam cupidatat adipisicing aute cillum amet eu
 dolor. Minim sunt exercitation pariatur tempor deserunt do commodo. Officia ad
