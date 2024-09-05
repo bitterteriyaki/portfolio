@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev:prepare": "nuxt prepare",
     "generate": "nuxt generate",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -16,6 +17,7 @@
     "@nuxt/eslint": "^0.5.5",
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.4",
+    "@nuxtjs/device": "^3.2.2",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@vercel/analytics": "^1.3.1",
     "@vercel/speed-insights": "^1.0.12",

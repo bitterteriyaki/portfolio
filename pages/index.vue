@@ -1,8 +1,9 @@
 <template>
   <UContainer>
     <Hero />
-    <section>
+    <section class="flex flex-col gap-32">
       <AboutMe />
+      <MyExperience />
     </section>
   </UContainer>
 </template>

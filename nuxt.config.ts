@@ -12,8 +12,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@nuxt/eslint',
-    '@nuxtjs/google-fonts',
     '@nuxt/image',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/device',
   ],
   colorMode: {
     preference: 'dark',
