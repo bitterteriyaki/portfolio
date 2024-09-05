@@ -8,7 +8,7 @@
       items-center
       gap-0.5
       rounded-full
-      border   
+      border
       border-blue-400
       bg-blue-400
       text-blue-200

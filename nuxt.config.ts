@@ -1,25 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ['@/assets/css/main.sass'],
   components: [{ path: '@/components', pathPrefix: false }],
-  modules: [
-    '@nuxt/image',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/device',
-    'nuxt-icon',
-  ],
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
     },
   },
-  // Modules configuration
-  eslint: { lintOnStart: false },
-  device: { refreshOnResize: true },
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/google-fonts'],
   colorMode: {
     preference: 'dark',
     fallback: 'system',
@@ -31,10 +21,5 @@ export default defineNuxtConfig({
     families: {
       'DM+Sans': [400, 500, 600, 700],
     },
-  },
-  image: {
-    formats: ['webp', 'png'],
-    domains: ['github.com'],
-    alias: { github: 'https://github.com' },
   },
 })
