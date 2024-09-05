@@ -12,6 +12,7 @@
       src="/github/bitterteriyaki.png"
       class="rounded-full"
       sizes="130px sm:160px md:220px"
+      alt="kyomi's avatar on GitHub"
     />
     <h1 class="text-4xl font-black">
       <span>
