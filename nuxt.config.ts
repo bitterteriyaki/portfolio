@@ -9,7 +9,12 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'en' },
     },
   },
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/google-fonts'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxtjs/google-fonts',
+    '@nuxt/image',
+  ],
   colorMode: {
     preference: 'dark',
     fallback: 'system',
@@ -21,5 +26,9 @@ export default defineNuxtConfig({
     families: {
       'DM+Sans': [400, 500, 600, 700],
     },
+  },
+  image: {
+    domains: ['github.com'],
+    alias: { github: 'https://github.com' },
   },
 })

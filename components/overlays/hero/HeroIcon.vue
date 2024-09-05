@@ -1,5 +1,18 @@
 <template>
-  <div>
+  <div
+    class="
+      flex
+      flex-col
+      items-center
+      justify-center
+      gap-4
+    "
+  >
+    <NuxtImg 
+      src="/github/bitterteriyaki.png"
+      class="rounded-full"
+      sizes="130px sm:160px md:220px"
+    />
     <h1 class="text-4xl font-black">
       <span>
         Let me turn your<br>ideas into
