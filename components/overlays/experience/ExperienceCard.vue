@@ -16,7 +16,6 @@
       hover:shadow-lg
       hover:border-t-gray-800
       hover:bg-gray-900
-      hover:bg-opacity-60
       hover:!opacity-100
       group-hover/list:opacity-40
     "
@@ -49,14 +48,14 @@
     <p class="text-slate-400 text-sm">
       {{ job.description }}
     </p>
-    <div class="flex flex-wrap gap-1 sm:gap-1.5">
+    <ul class="flex flex-wrap gap-1 sm:gap-1.5">
       <Tag
         v-for="tech, idx in job.techs"
         :key="idx"
       >
         {{ tech }}
       </Tag>
-    </div>
+    </ul>
   </NuxtLink>
 </template>
 

@@ -24,13 +24,11 @@
         to-50%
       "
     />
-    <div class="flex flex-col gap-4 group/list">
-      <ExperienceCard
-        v-for="job, idx in jobs"
-        :key="idx"
-        :job="job"
-      />
-    </div>
+    <ul class="flex flex-col gap-4 group/list">
+      <li v-for="job, idx in jobs" :key="idx">
+        <ExperienceCard :job="job" />
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -53,7 +51,7 @@ const jobs: Job[] = [
       'Kotlin',
       'JavaScript',
       'Jenkins',
-      'Oracle DB',
+      'Oracle DBMS',
       'Angular',
       'HTML/CSS',
       'Git',

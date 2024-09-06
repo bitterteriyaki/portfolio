@@ -1,5 +1,5 @@
 <template>
-  <span
+  <li
     class="
       px-2
       py-1
@@ -13,5 +13,5 @@
     "
   >
     <slot />
-  </span>
+  </li>
 </template>
