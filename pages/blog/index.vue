@@ -52,4 +52,8 @@
 useHead({
   title: 'Blog',
 })
+
+definePageMeta({
+  layout: 'blog',
+})
 </script>

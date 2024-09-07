@@ -1,8 +1,12 @@
 <template>
   <UContainer class="max-w-3xl flex flex-col gap-4">
     <ContentDoc v-slot="{ doc }">
-      <PostTitle :title="doc.title || 'Post'" :description="doc.description" />
-      <PostDate :published-at="doc.publishedAt" />
+      <div class="flex flex-col gap-2">
+        <h1 class="font-black text-4xl text-slate-200">
+          {{ doc.title }}
+        </h1>
+        <PostDate :published-at="doc.publishedAt" />
+      </div>
       <UDivider />
       <NuxtImg
         :src="doc.banner.url"
@@ -30,3 +34,9 @@
     </ContentDoc>
   </UContainer>
 </template>
+
+<script setup lang="ts">
+definePageMeta({
+  layout: 'blog',
+})
+</script>
