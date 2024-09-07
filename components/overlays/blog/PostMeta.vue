@@ -1,19 +1,12 @@
 <template>
-  <div class="flex flex-col gap-1">
-    <PostAuthor :published-at="publishedAt" />
-    <PostButtons :tags="tags" />
+  <div class="flex items-center justify-between">
+    <PostTags :tags="tags" />
+    <ShareButton />
   </div>
 </template>
 
 <script setup lang="ts">
 defineProps({
-  publishedAt: {
-    type: String,
-    required: true,
-  },
-  tags: {
-    type: Array<string>,
-    required: true,
-  },
+  tags: { type: Array<string>, required: true },
 })
 </script>

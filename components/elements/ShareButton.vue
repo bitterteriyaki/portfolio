@@ -2,7 +2,7 @@
   <UTooltip text="Share this post">
     <UButton
       icon="heroicons:arrow-up-tray"
-      size="md"
+      size="sm"
       :ui="
         {
           variant: {
