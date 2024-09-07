@@ -1,5 +1,6 @@
 ---
 title: Lorem Ipsum
+draft: true
 publishedAt: 2024-09-06T18:07:31.631507+00:00
 banner:
   url: 'https://raw.githubusercontent.com/nuxt/nuxt/master/.github/assets/banner.svg'
@@ -14,8 +15,6 @@ This is a very basic description.
 Dolore sit ad pariatur deserunt veniam cupidatat adipisicing aute cillum amet eu
 dolor. Minim sunt exercitation pariatur tempor deserunt do commodo. Officia ad
 nulla laboris in nisi.
-
-# Title
 
 Fugiat aliqua nisi laboris quis culpa irure sit mollit eiusmod mollit dolore
 dolore officia. Irure eiusmod in ut proident ut ea officia sunt minim est minim
@@ -58,3 +57,7 @@ console.log('Hello, World!')
 ```
 
 Some text with a [link](https://nuxt.om). Some **bold** and *italic* text.
+
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |

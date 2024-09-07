@@ -3,7 +3,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ['@/assets/css/main.sass'],
-  components: [{ path: '@/components', pathPrefix: false }],
+  components: [
+    { path: '@/components', pathPrefix: false },
+    { path: '@/components/content', pathPrefix: true },
+  ],
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
