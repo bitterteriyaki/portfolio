@@ -8,9 +8,8 @@ export default defineNuxtConfig({
     { path: '@/components/content', pathPrefix: true },
   ],
   app: {
-    head: {
-      htmlAttrs: { lang: 'en' },
-    },
+    head: { htmlAttrs: { lang: 'en' } },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: [
     '@nuxt/ui',

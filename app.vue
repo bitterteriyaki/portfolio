@@ -2,7 +2,6 @@
   <NuxtLayout>
     <NuxtPage />
     <SpeedInsights />
-
     <UNotifications />
   </NuxtLayout>
 </template>
