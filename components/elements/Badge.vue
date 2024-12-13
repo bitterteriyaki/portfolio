@@ -2,7 +2,7 @@
   <NuxtLink
     class="
       px-2
-      py-0.5
+      py-1
       text-xs
       border
       border-blue-400
@@ -11,6 +11,7 @@
       hover:border-blue-300
       hover:bg-blue-300
       hover:text-blue-100
+      hover:border-t-blue-50
       hover:bg-opacity-20
       bg-opacity-10
       rounded-full
@@ -21,7 +22,10 @@
     :to="to"
   >
     <slot />
-    <Icon name="heroicons:arrow-up-right-16-solid" size="16px" />
+    <Icon
+      name="heroicons:arrow-up-right-16-solid"
+      size="16px"
+    />
   </NuxtLink>
 </template>
 
