@@ -42,6 +42,14 @@ export default defineNuxtConfig({
   image: {
     domains: ['github.com'],
     alias: { github: 'https://github.com' },
+    screens: {
+      'icon-xs': 130,
+      'icon-sm': 160,
+      'icon-md': 220,
+      'objects-xs': 300,
+      'objects-sm': 400,
+      'objects-md': 500,
+    }
   },
   content: {
     markdown: {

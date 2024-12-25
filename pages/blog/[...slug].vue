@@ -7,6 +7,7 @@
       </section>
       <UDivider />
       <NuxtImg
+        v-if="doc.banner"
         :src="doc.banner.url"
         :alt="doc.banner.alt"
         class="rounded-lg"

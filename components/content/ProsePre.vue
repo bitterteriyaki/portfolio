@@ -34,6 +34,7 @@ defineProps({
   @apply p-4
   @apply rounded-lg
   @apply border
+  @apply text-wrap
   @apply border-slate-800
   @apply bg-slate-900
 </style>
