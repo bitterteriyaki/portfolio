@@ -5,6 +5,7 @@
     class="
       underline
       transition-colors
+      text-slate-200
       decoration-slate-700
       hover:decoration-slate-400
     "

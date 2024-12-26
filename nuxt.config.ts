@@ -52,6 +52,7 @@ export default defineNuxtConfig({
     },
     highlight: {
       theme: 'material-theme-palenight',
+      langs: ['toml'],
     }
   },
 })

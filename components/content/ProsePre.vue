@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm">
+  <div class="text-sm my-4">
     <pre class="codeblock"><slot /></pre>
   </div>
 </template>
