@@ -1,5 +1,5 @@
 <template>
-  <h2 :id="props.id" class="text-2xl font-bold">
+  <h2 :id="props.id" class="text-3xl font-semibold text-slate-300">
     <NuxtLink
       v-if="props.id && generate"
       :href="`#${props.id}`"

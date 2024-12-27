@@ -6,7 +6,7 @@
       underline
       transition-colors
       decoration-slate-700
-      hover:decoration-slate-500
+      hover:decoration-slate-400
     "
   >
     <slot />

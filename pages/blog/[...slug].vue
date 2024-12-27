@@ -7,6 +7,8 @@
       </section>
       <UDivider />
       <ContentRenderer :value="doc" />
+      <UDivider />
+      <PostMeta :tags="doc.tags" />
     </ContentDoc>
   </UContainer>
 </template>
