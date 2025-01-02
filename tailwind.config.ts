@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss/types'
-import defaultFamily from 'tailwindcss/defaultTheme'
-import typography from '@tailwindcss/typography'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>>{
   theme: {
@@ -8,9 +7,8 @@ export default <Partial<Config>>{
       sans: [
         'DM Sans',
         'DM Sans fallback',
-        ...defaultFamily.fontFamily.sans,
+        ...defaultTheme.fontFamily.sans,
       ],
     },
   },
-  plugins: [typography],
 }
