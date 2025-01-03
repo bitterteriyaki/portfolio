@@ -58,7 +58,7 @@ const jobs: Job[] = [
     ],
   },
   {
-    title: 'Software Developer Intern',
+    title: 'Software Engineering Intern',
     startDate: 'Jul 2024',
     endDate: 'Sep 2024',
     company: 'Tribunal de Contas da União',
@@ -79,7 +79,7 @@ const jobs: Job[] = [
     ],
   },
   {
-    title: 'Software Engineer',
+    title: 'Systems Developer',
     startDate: 'Jun 2022',
     endDate: 'Dec 2022',
     company: 'Tecnisys',

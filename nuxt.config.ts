@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.sass'],
   components: [
     { path: '@/components', pathPrefix: false },
+    { path: '@/components/content', pathPrefix: true },
   ],
   app: {
     head: { htmlAttrs: { lang: 'en' } },
@@ -13,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/eslint',
     '@nuxt/image',
+    '@nuxt/content',
     '@nuxtjs/google-fonts',
     '@nuxtjs/device',
   ],
