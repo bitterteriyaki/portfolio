@@ -1,10 +1,10 @@
 <template>
-  <h2 :id="props.id" class="text-3xl font-black text-slate-300">
+  <h3 :id="props.id" class="text-2xl font-semibold text-slate-300">
     <NuxtLink v-if="props.id && generate" :href="`#${props.id}`">
       <slot />
     </NuxtLink>
     <slot v-else />
-  </h2>
+  </h3>
 </template>
 
 <script setup lang="ts">
@@ -27,7 +27,7 @@ const generate = computed(() => {
     return headings.anchorLinks
 
   if (typeof headings?.anchorLinks === 'object')
-    return headings.anchorLinks.h2
+    return headings.anchorLinks.h3
 
   return false
 })

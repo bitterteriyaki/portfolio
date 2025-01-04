@@ -6,7 +6,17 @@
         <PostDate :published-at="doc.publishedAt" />
       </section>
       <UDivider />
-      <ContentRenderer :value="doc" />
+      <NuxtImg
+        :src="doc.banner.url"
+        :alt="doc.banner.alt"
+        class="rounded-lg"
+        placeholder
+      />
+      <ContentRenderer
+        :value="doc"
+        tag="section"
+        class="first:*:mt-0 last:*:mb-0"
+      />
       <UDivider />
       <PostMeta :tags="doc.tags" />
     </ContentDoc>

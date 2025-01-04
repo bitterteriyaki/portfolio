@@ -58,6 +58,8 @@ console.log('Hello, World!')
 
 Some text with a [link](https://nuxt.com). Some **bold** and *italic* text.
 
-| Header 1 | Header 2 |
-|----------|----------|
-| Cell 1   | Cell 2   |
+This is a $$\int_{-\pi}^{\pi}xdx$$ test.
+
+$$
+  L = \frac{1}{2} \rho v^2 S C_L \int_{-\pi}^{\pi} sin(x)dx
+$$

@@ -8,7 +8,15 @@ export default defineNuxtConfig({
     { path: '@/components/content', pathPrefix: true },
   ],
   app: {
-    head: { htmlAttrs: { lang: 'en' } },
+    head: {
+      htmlAttrs: { lang: 'en' },
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css'
+        },
+      ],
+    },
   },
   modules: [
     '@nuxt/ui',
@@ -34,5 +42,13 @@ export default defineNuxtConfig({
   image: {
     domains: ['github.com'],
     alias: { github: 'https://github.com' },
+  },
+  content: {
+    markdown: {
+      remarkPlugins: ['remark-math'],
+      rehypePlugins: {
+        'rehype-katex': { output: 'html' },
+      },
+    },
   },
 })
