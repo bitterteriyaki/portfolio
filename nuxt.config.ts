@@ -50,5 +50,8 @@ export default defineNuxtConfig({
         'rehype-katex': { output: 'html' },
       },
     },
+    highlight: {
+      theme: 'material-theme-palenight',
+    }
   },
 })

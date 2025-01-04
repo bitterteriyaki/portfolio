@@ -52,8 +52,25 @@ Sunt reprehenderit veniam magna velit culpa exercitation nisi. Aute laborum
 proident aliqua enim. Mollit duis minim veniam aute magna reprehenderit officia
 sit sint do fugiat qui. This is a `code` block.
 
-```ts
-console.log('Hello, World!')
+```typescript
+export default defineNuxtConfig({
+  content: {
+    highlight: {
+      // Theme used in all color schemes.
+      theme: 'github-light',
+      // OR
+      theme: {
+        // Default theme (same as single string)
+        default: 'github-light',
+        // Theme used if `html.dark`
+        dark: 'github-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai'
+      }
+    }
+  }
+})
+
 ```
 
 Some text with a [link](https://nuxt.com). Some **bold** and *italic* text.
@@ -61,5 +78,5 @@ Some text with a [link](https://nuxt.com). Some **bold** and *italic* text.
 This is a $$\int_{-\pi}^{\pi}xdx$$ test.
 
 $$
-  L = \frac{1}{2} \rho v^2 S C_L \int_{-\pi}^{\pi} sin(x)dx
+L = \frac{1}{2} \rho v^2 S C_L \int_{-\pi}^{\pi} sin(x)dx
 $$
