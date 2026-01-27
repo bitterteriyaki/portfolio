@@ -1,6 +1,6 @@
-import { fileURLToPath } from 'node:url'
 import { defineConfig, devices } from '@playwright/test'
 import type { ConfigOptions } from '@nuxt/test-utils/playwright'
+import { fileURLToPath } from 'node:url'
 
 export default defineConfig<ConfigOptions>({
   testDir: './tests',
@@ -11,14 +11,9 @@ export default defineConfig<ConfigOptions>({
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
-    nuxt: {
-      rootDir: fileURLToPath(new URL('.', import.meta.url)),
-    },
+    nuxt: { rootDir: fileURLToPath(new URL('.', import.meta.url)) },
   },
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
 })

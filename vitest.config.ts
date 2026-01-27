@@ -1,6 +1,6 @@
-import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitest/config'
 import { defineVitestProject } from '@nuxt/test-utils/config'
+import { fileURLToPath } from 'node:url'
 
 export default defineConfig({
   test: {
@@ -8,14 +8,14 @@ export default defineConfig({
       {
         test: {
           name: 'unit',
-          include: ['test/unit/*.{test,spec}.ts'],
+          include: ['tests/unit/*.{test,spec}.ts'],
           environment: 'node',
         },
       },
       await defineVitestProject({
         test: {
           name: 'nuxt',
-          include: ['test/nuxt/*.{test,spec}.ts'],
+          include: ['tests/nuxt/*.{test,spec}.ts'],
           environment: 'nuxt',
           environmentOptions: {
             nuxt: {
@@ -26,9 +26,6 @@ export default defineConfig({
         },
       }),
     ],
-    coverage: {
-      enabled: true,
-      provider: 'v8',
-    },
+    coverage: { enabled: true, provider: 'v8' },
   },
 })
