@@ -1,5 +1,5 @@
 packages:
-  - '.'
+  - .
 
 ignoredBuiltDependencies:
   - '@parcel/watcher'
@@ -10,3 +10,4 @@ ignoredBuiltDependencies:
 
 onlyBuiltDependencies:
   - better-sqlite3
+  - sharp

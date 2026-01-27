@@ -1,5 +1,6 @@
 {
-  "name": "portfolio",
+  "name": "@bitterteriyaki/portfolio",
+  "packageManager": "pnpm@10.28.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.13.0",
+    "@nuxt/eslint-config": "^1.13.0",
     "@playwright/test": "^1.58.0",
     "@vitest/coverage-v8": "^4.0.18",
     "@vue/test-utils": "^2.4.6",
@@ -43,6 +45,5 @@
     "typescript": "^5.9.3",
     "vitest": "^4.0.18",
     "vue-tsc": "^3.2.4"
-  },
-  "packageManager": "pnpm@10.28.1"
+  }
 }
