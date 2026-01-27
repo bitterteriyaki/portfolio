@@ -23,4 +23,9 @@ logs
 .env.*
 !.env.example
 
-.husky/_/
+# Test coverage
+coverage/
+
+# Playwright
+playwright-report/
+test-results/
