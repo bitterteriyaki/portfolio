@@ -20,8 +20,7 @@
     "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.87",
-    "@iconify-json/simple-icons": "^1.2.67",
+    "@iconify-json/heroicons": "^1.2.3",
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/content": "3.11.0",
     "@nuxt/hints": "1.0.0-alpha.5",

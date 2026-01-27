@@ -1,18 +1,50 @@
-<script setup>
-useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+<script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
 
-const title = 'Nuxt Starter Template'
-const description = 'A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.'
+const route = useRoute()
+
+const title = 'kyomi\'s portfolio and blog'
+const description = ''
+
+const items = ref<NavigationMenuItem[]>([
+  {
+    label: 'Home',
+    icon: 'i-heroicons-home-20-solid',
+    to: '/',
+    active: route.path.startsWith('/'),
+  },
+  {
+    label: 'Blog',
+    icon: 'i-heroicons-document-text-20-solid',
+    to: '/blog',
+    active: route.path.startsWith('/blog'),
+  },
+  // {
+  //   label: 'Projects',
+  //   icon: 'i-heroicons-briefcase-20-solid',
+  //   to: '/projects',
+  //   active: route.path.startsWith('/projects'),
+  // },
+  // {
+  //   label: 'Contact',
+  //   icon: 'i-heroicons-chat-bubble-oval-left-20-solid',
+  //   to: '/contact',
+  //   active: route.path.startsWith('/contact'),
+  // },
+  // {
+  //   label: 'Resume',
+  //   icon: 'i-heroicons-document-check-20-solid',
+  //   to: '/resume',
+  //   active: route.path.startsWith('/resume'),
+  // },
+])
+
+useHead({
+  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+  link: [{ rel: 'icon', href: '/favicon.ico' }],
+  htmlAttrs: { lang: 'en' },
+  titleTemplate: '%s | kyomi',
+})
 
 useSeoMeta({
   title,
@@ -21,7 +53,7 @@ useSeoMeta({
   ogDescription: description,
   ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
   twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
-  twitterCard: 'summary_large_image'
+  twitterCard: 'summary_large_image',
 })
 </script>
 
@@ -29,32 +61,38 @@ useSeoMeta({
   <UApp>
     <UHeader>
       <template #left>
-        <NuxtLink to="/">
-          <AppLogo class="w-auto h-6 shrink-0" />
-        </NuxtLink>
+        <UAvatar
+          src="github/bitterteriyaki.png"
+          size="lg"
+          alt="kyomi's avatar"
+        />
+      </template>
 
-        <TemplateMenu />
+      <template #default>
+        <UNavigationMenu :items="items" color="neutral" />
       </template>
 
       <template #right>
         <UColorModeButton />
-
         <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
+          to="/resume.pdf"
           target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
           color="neutral"
-          variant="ghost"
-        />
+          variant="outline"
+          trailing-icon="i-heroicons-document-check-20-solid"
+        >
+          Resume
+        </UButton>
       </template>
     </UHeader>
 
     <UMain>
-      <NuxtPage />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </UMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" />
+    <USeparator />
 
     <UFooter>
       <template #left>
@@ -65,7 +103,7 @@ useSeoMeta({
 
       <template #right>
         <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
+          to="https://github.com/bitterteriyaki"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"
