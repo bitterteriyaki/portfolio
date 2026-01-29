@@ -18,5 +18,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   routeRules: { '/': { prerender: true } },
   compatibilityDate: '2025-01-15',
-  image: { domains: ['github.com'], alias: { github: 'https://github.com' } },
+  image: {
+    domains: ['github.com'],
+    alias: { github: 'https://github.com' },
+    screens: {
+      'icon-xs': 130,
+      'icon-sm': 160,
+      'icon-md': 220,
+    },
+  },
 })
