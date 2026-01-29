@@ -5,12 +5,7 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <UPageHero title="kyomi" :links="[]">
-      <template #top>
-        <HeroBackground />
-      </template>
-    </UPageHero>
+  <LandingHero />
 
     <!-- <UPageSection
       id="features"
@@ -64,5 +59,4 @@ useHead({
         }]"
       />
     </UPageSection> -->
-  </div>
 </template>

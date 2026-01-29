@@ -10,6 +10,10 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
   ],
+  components: [
+    { path: '~/components/layout', pathPrefix: false },
+    { path: '~/components', pathPrefix: true },
+  ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   routeRules: { '/': { prerender: true } },
