@@ -8,6 +8,7 @@ export default createConfigForNuxt({
 })
   .overrideRules({
     'vue/multi-word-component-names': 'off',
+    'vue/no-multiple-template-root': 'off',
     'vue/max-attributes-per-line': ['error', { singleline: 5 }],
   })
   .prepend({

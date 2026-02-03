@@ -61,5 +61,14 @@ const items = ref<NavigationMenuItem[]>([
         Resume
       </UButton>
     </template>
+
+    <template #body>
+      <UNavigationMenu
+        :items="items"
+        color="neutral"
+        orientation="vertical"
+        class="py-4"
+      />
+    </template>
   </UHeader>
 </template>

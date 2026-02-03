@@ -35,6 +35,7 @@ const links: PageHeroProps['links'] = [
 ]
 
 const ui: PageHeroProps['ui'] = {
+  container: 'items-center h-[calc(100vh-var(--ui-header-height)-20px)]',
   title: 'flex flex-col gap-4 items-center justify-center',
   description: 'sm:text-lg',
   links: 'gap-x-2',
