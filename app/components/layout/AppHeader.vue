@@ -3,12 +3,12 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
 
-const items = ref<NavigationMenuItem[]>([
+const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Home',
     icon: 'i-heroicons-home-20-solid',
     to: '/',
-    active: route.path.startsWith('/'),
+    active: route.path === '/',
   },
   {
     label: 'Blog',

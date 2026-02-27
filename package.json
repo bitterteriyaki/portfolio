@@ -6,6 +6,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev:prepare": "nuxt prepare",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
@@ -31,6 +32,7 @@
     "@nuxt/ui": "^4.4.0",
     "@unhead/vue": "^2.1.2",
     "better-sqlite3": "^12.6.2",
+    "date-fns": "^4.1.0",
     "nuxt": "^4.2.2",
     "tailwindcss": "^4.1.18"
   },
