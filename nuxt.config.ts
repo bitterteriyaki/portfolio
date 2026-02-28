@@ -15,7 +15,22 @@ export default defineNuxtConfig({
     { path: '~/components', pathPrefix: true },
   ],
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', 'katex/dist/katex.min.css'],
+  content: {
+    build: {
+      markdown: {
+        remarkPlugins: {
+          'remark-math': {},
+        },
+        rehypePlugins: {
+          'rehype-katex': { output: 'html' },
+        },
+        highlight: {
+          langs: ['toml', 'cpp'],
+        },
+      },
+    },
+  },
   routeRules: { '/': { prerender: true } },
   compatibilityDate: '2025-01-15',
   image: {

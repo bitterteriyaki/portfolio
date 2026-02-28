@@ -17,7 +17,7 @@ export default defineContentConfig({
       type: 'page',
       source: 'blog/*.md',
       schema: z.object({
-        publishedAt: z.date(),
+        date: z.date(),
         minRead: z.number(),
         image: z.string().nonempty().editor({ input: 'media' }),
         author: createAuthorSchema(),

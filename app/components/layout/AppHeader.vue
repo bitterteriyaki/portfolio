@@ -46,7 +46,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     </template>
 
     <template #default>
-      <UNavigationMenu :items="items" color="neutral" />
+      <UNavigationMenu :items="items" color="neutral" highlight />
     </template>
 
     <template #right>

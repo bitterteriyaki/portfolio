@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const fetch = () => queryCollection('blog').order('publishedAt', 'DESC').all()
+const fetch = () => queryCollection('blog').order('date', 'DESC').all()
 const { data: posts } = await useAsyncData('posts', fetch)
 </script>
 
