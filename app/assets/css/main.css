@@ -12,6 +12,22 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
+
+  .katex {
+    font-size: 0.8em;
+
+    @media (min-width: theme('screens.sm')) {
+      font-size: 1em;
+    }
+  }
+
+  .katex-display {
+    font-size: 0.75em;
+
+    @media (min-width: theme('screens.sm')) {
+      font-size: 1em;
+    }
+  }
 }
 
 .dark {

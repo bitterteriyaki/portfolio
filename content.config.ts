@@ -11,19 +11,20 @@ const createAuthorSchema = () => z.object({
   avatar: createImageSchema().optional(),
 })
 
+const createBlogSchema = () => z.object({
+  date: z.date(),
+  minRead: z.number(),
+  image: z.string().nonempty().editor({ input: 'media' }),
+  author: createAuthorSchema(),
+  tags: z.array(z.string()),
+})
+
 export default defineContentConfig({
   collections: {
     blog: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
-      schema: z.object({
-        date: z.date(),
-        minRead: z.number(),
-        image: z.string().nonempty().editor({ input: 'media' }),
-        author: createAuthorSchema(),
-
-        // tags: z.array(z.string()),
-      }),
+      source: 'blog/**/*.md',
+      schema: createBlogSchema(),
     }),
   },
 })
