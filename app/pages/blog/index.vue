@@ -96,6 +96,7 @@ useHead({
                 <div class="flex flex-col gap-1.5">
                   <h3
                     class="
+                      text-lg
                       font-bold
                       leading-snug
                       group-hover:text-primary
@@ -104,7 +105,7 @@ useHead({
                   >
                     {{ post.title }}
                   </h3>
-                  <div class="flex items-center gap-3 text-xs text-muted">
+                  <div class="flex items-center gap-3 text-sm text-muted">
                     <span v-if="post.date" class="flex items-center gap-1">
                       <UIcon name="i-heroicons-calendar" />
                       {{ format(new Date(post.date), 'PP') }}
