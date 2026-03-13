@@ -8,4 +8,5 @@ useHead({
   <LandingHero />
   <LandingAboutMe />
   <LandingExperiences />
+  <LandingLatestPosts />
 </template>
