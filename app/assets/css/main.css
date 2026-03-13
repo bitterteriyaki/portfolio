@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@source "../../../content/**/*";
+
+@theme static {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  .katex {
+    font-size: 0.8em;
+
+    @media (min-width: theme('screens.sm')) {
+      font-size: 1em;
+    }
+  }
+
+  .katex-display {
+    font-size: 0.75em;
+
+    @apply text-slate-800 dark:text-slate-300;
+
+    @media (min-width: theme('screens.sm')) {
+      font-size: 1em;
+    }
+  }
+}
+
+.dark {
+  --ui-bg: var(--ui-color-neutral-950);
+}

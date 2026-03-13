@@ -1,42 +1,47 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
-  css: ['@/assets/css/main.sass'],
-  components: [
-    { path: '@/components', pathPrefix: false },
-    { path: '@/components/content', pathPrefix: true },
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/ui',
+    '@nuxt/a11y',
+    '@nuxt/content',
+    '@nuxt/hints',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxt/test-utils',
+    '@nuxtjs/device',
   ],
-  app: {
-    head: {
-      htmlAttrs: { lang: 'en' },
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css'
+  components: [
+    { path: '~/components/layout', pathPrefix: false },
+    { path: '~/components/overlays', pathPrefix: false },
+    { path: '~/components', pathPrefix: true },
+  ],
+  devtools: { enabled: true },
+  css: ['~/assets/css/main.css', 'katex/dist/katex.min.css'],
+  content: {
+    build: {
+      markdown: {
+        remarkPlugins: {
+          'remark-math': {},
         },
-      ],
+        rehypePlugins: {
+          'rehype-katex': { output: 'html' },
+        },
+        highlight: {
+          langs: ['toml', 'cpp'],
+        },
+      },
     },
   },
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/content',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/device',
-    '@vueuse/nuxt',
-  ],
-  colorMode: {
-    preference: 'dark',
-    fallback: 'system',
-    classSuffix: '',
-  },
-  googleFonts: {
-    display: 'swap',
-    download: true,
-    families: {
-      'DM Sans': [400, 500, 700],
+  routeRules: { '/': { prerender: true } },
+  compatibilityDate: '2025-01-15',
+  nitro: { prerender: { crawlLinks: true } },
+  typescript: {
+    tsConfig: {
+      include: [
+        '../tests/e2e/**/*.test.ts',
+        '../tests/unit/**/*.test.ts',
+      ],
     },
   },
   image: {
@@ -46,21 +51,6 @@ export default defineNuxtConfig({
       'icon-xs': 130,
       'icon-sm': 160,
       'icon-md': 220,
-      'objects-xs': 300,
-      'objects-sm': 400,
-      'objects-md': 500,
-    }
-  },
-  content: {
-    markdown: {
-      remarkPlugins: ['remark-math'],
-      rehypePlugins: {
-        'rehype-katex': { output: 'html' },
-      },
     },
-    highlight: {
-      theme: 'material-theme-palenight',
-      langs: ['toml', 'cpp'],
-    }
   },
 })

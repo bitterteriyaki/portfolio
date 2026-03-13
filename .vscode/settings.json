@@ -1,0 +1,19 @@
+{
+  // Files settings
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {"*.css": "tailwindcss"},
+
+  // Editor settings
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+
+  // Tailwind CSS settings
+  "tailwindCSS.classAttributes": ["class", "ui"],
+
+  // ESLint settings
+  "eslint.useFlatConfig": true
+}
