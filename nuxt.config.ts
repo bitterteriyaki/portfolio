@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   ],
   components: [
     { path: '~/components/layout', pathPrefix: false },
+    { path: '~/components/overlays', pathPrefix: false },
     { path: '~/components', pathPrefix: true },
   ],
   devtools: { enabled: true },
@@ -33,6 +34,14 @@ export default defineNuxtConfig({
   },
   routeRules: { '/': { prerender: true } },
   compatibilityDate: '2025-01-15',
+  typescript: {
+    tsConfig: {
+      include: [
+        '../tests/e2e/**/*.test.ts',
+        '../tests/unit/**/*.test.ts',
+      ],
+    },
+  },
   image: {
     domains: ['github.com'],
     alias: { github: 'https://github.com' },

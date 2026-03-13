@@ -2,7 +2,7 @@
 import type { NuxtError } from '#app'
 
 interface ErrorPage {
-  error: NuxtError
+  error: Partial<NuxtError>
 }
 
 defineProps<ErrorPage>()

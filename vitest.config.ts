@@ -4,18 +4,13 @@ import { fileURLToPath } from 'node:url'
 
 export default defineConfig({
   test: {
+    watch: false,
+    coverage: { enabled: true, provider: 'v8' },
     projects: [
-      {
-        test: {
-          name: 'unit',
-          include: ['tests/unit/*.{test,spec}.ts'],
-          environment: 'node',
-        },
-      },
       await defineVitestProject({
         test: {
           name: 'nuxt',
-          include: ['tests/nuxt/*.{test,spec}.ts'],
+          include: ['tests/nuxt/**/*.{test,spec}.ts'],
           environment: 'nuxt',
           environmentOptions: {
             nuxt: {
@@ -26,6 +21,5 @@ export default defineConfig({
         },
       }),
     ],
-    coverage: { enabled: true, provider: 'v8' },
   },
 })

@@ -24,6 +24,8 @@
   .katex-display {
     font-size: 0.75em;
 
+    @apply text-slate-800 dark:text-slate-300;
+
     @media (min-width: theme('screens.sm')) {
       font-size: 1em;
     }

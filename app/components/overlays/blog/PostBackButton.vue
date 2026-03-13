@@ -1,0 +1,10 @@
+<template>
+  <UButton
+    variant="link"
+    color="neutral"
+    icon="i-heroicons-arrow-left-20-solid"
+    size="xs"
+  >
+    Blog
+  </UButton>
+</template>

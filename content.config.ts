@@ -12,8 +12,8 @@ const createAuthorSchema = () => z.object({
 })
 
 const createBlogSchema = () => z.object({
-  date: z.date(),
-  minRead: z.number(),
+  date: z.date().optional(),
+  minRead: z.number().optional(),
   image: z.string().nonempty().editor({ input: 'media' }),
   author: createAuthorSchema(),
   tags: z.array(z.string()),
