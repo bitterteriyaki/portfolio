@@ -32,7 +32,7 @@ useHead({
 </script>
 
 <template>
-  <UContainer class="py-12 px-8 sm:px-6">
+  <UContainer class="py-12">
     <div class="max-w-3xl mx-auto">
       <div class="mb-12">
         <h1 class="text-4xl font-black mb-3">

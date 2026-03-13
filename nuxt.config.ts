@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils',
+    '@nuxtjs/device',
   ],
   components: [
     { path: '~/components/layout', pathPrefix: false },

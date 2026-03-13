@@ -33,6 +33,7 @@
     "@nuxt/scripts": "0.13.2",
     "@nuxt/test-utils": "4.0.0",
     "@nuxt/ui": "^4.5.1",
+    "@nuxtjs/device": "4.0.0",
     "@unhead/vue": "^2.1.12",
     "@vueuse/core": "^14.2.1",
     "better-sqlite3": "^12.6.2",

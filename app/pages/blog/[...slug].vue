@@ -11,6 +11,9 @@ const navigation = computed<ContentNavigationItem[]>(() => {
     return []
 
   const postsByYear = posts.value.reduce((acc, post) => {
+    if (!post.date)
+      return acc
+
     const year = new Date(post.date).getFullYear().toString()
 
     if (!acc[year])
@@ -49,7 +52,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer class="my-10 px-8 sm:px-6">
+  <UContainer class="my-10">
     <UPage v-if="page">
       <template #left>
         <UPageAside>
