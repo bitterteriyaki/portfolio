@@ -34,6 +34,9 @@ export default defineNuxtConfig({
   },
   routeRules: { '/': { prerender: true } },
   compatibilityDate: '2025-01-15',
+  nitro: {
+    prerender: { crawlLinks: true },
+  },
   typescript: {
     tsConfig: {
       include: [
