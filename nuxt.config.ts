@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@nuxtjs/device',
+    '@vercel/speed-insights',
   ],
   components: [
     { path: '~/components/layout', pathPrefix: false },
