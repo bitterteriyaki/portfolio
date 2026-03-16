@@ -21,10 +21,12 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
   ogImage: 'https://i.imgur.com/0yIQu2V.png',
+  ogUrl: 'https://kyomi.dev',
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: 'https://i.imgur.com/0yIQu2V.png',
   twitterCard: 'summary_large_image',
+  themeColor: '#0F172B',
 })
 </script>
 
