@@ -7,7 +7,7 @@ const { isMobile } = useDevice()
 
 <template>
   <UContainer class="my-16">
-    <div class="flex items-center justify-between mb-8">
+    <div class="block sm:flex justify-between mb-8">
       <h2
         class="
           text-3xl
