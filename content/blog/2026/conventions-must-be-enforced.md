@@ -2,7 +2,7 @@
 title: Conventions must be enforced
 date: 2026-03-13T16:27:00.000000-03:00
 minRead: 10
-image: 'https://media.parasoft.com/cdn-cgi/imagedelivery/iu4N-Xe4Xq_f9Hw7qvnDtA/007115c4-bcd5-43fe-6ae5-87e3fd27a200/w=622,fit=crop,quality=85,format=auto'
+image: '/img/conventions.png'
 author:
   name: kyomi
   description: Software Engineer
