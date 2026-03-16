@@ -11,7 +11,7 @@ defineProps<PostMetaProps>()
 <template>
   <div class="flex flex-col gap-6">
     <div class="flex justify-between">
-      <PostTags :tags="post.tags" />
+      <PostTags :language="post.language" :tags="post.tags" />
       <PostShareButton />
     </div>
     <PostSurround />

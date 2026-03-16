@@ -37,5 +37,4 @@ useSeoMeta({
     <USeparator />
     <AppFooter />
   </UApp>
-  <SpeedInsights />
 </template>

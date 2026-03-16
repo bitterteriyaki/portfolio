@@ -11,6 +11,7 @@ author:
   avatar:
     src: '/github/bitterteriyaki.png'
     alt: 'Avatar of the author'
+language: english
 tags:
   - software engineering
   - code quality

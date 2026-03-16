@@ -1,5 +1,7 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
+const ALLOWED_LANGUAGES = ['english', 'portuguese'] as const
+
 const createImageSchema = () => z.object({
   src: z.string().editor({ input: 'media' }),
   alt: z.string(),
@@ -16,6 +18,7 @@ const createBlogSchema = () => z.object({
   minRead: z.number().optional(),
   image: z.string().nonempty().editor({ input: 'media' }),
   author: createAuthorSchema(),
+  language: z.enum(ALLOWED_LANGUAGES),
   tags: z.array(z.string()),
 })
 
