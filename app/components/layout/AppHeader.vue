@@ -57,6 +57,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         color="neutral"
         variant="outline"
         trailing-icon="i-heroicons-document-check-20-solid"
+        disabled
       >
         Resume
       </UButton>
