@@ -21,6 +21,7 @@ defineProps<BlogYearGroupProps>()
         mb-6
         pb-2
         border-b
+        border-dashed
         border-default
       "
     >

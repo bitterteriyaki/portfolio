@@ -169,3 +169,13 @@ developer's machine automatically, ensuring that all team members use the same
 hooks and follow the same rules.
 
 ![pre-commit example](/img/pre-commit.png)
+
+## My Codebase Is Too Big, I Can't Enforce Conventions
+
+You don't need to enforce conventions on the entire codebase at once. You can
+start enforcing conventions on new code and gradually refactor old code to
+comply with the standards. This way, you can improve code quality over time
+without needing to do a massive refactor all at once, which can be risky and
+time-consuming. Small steps can lead to big improvements in the long run, and it
+is better to have some code following conventions than to have all code messy
+and disorganized.

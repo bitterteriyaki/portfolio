@@ -33,20 +33,10 @@ defineProps<{ post: BlogCollectionItem }>()
         object-cover
         object-center
         shrink-0
-        transition-opacity
-        group-hover:opacity-75
       "
     />
     <div class="flex flex-col gap-1.5">
-      <h3
-        class="
-          text-lg
-          font-bold
-          leading-snug
-          group-hover:text-primary
-          transition-colors
-        "
-      >
+      <h3 class="text-lg font-bold leading-snug">
         {{ post.title }}
       </h3>
       <div class="flex items-center gap-3 text-sm text-muted">
