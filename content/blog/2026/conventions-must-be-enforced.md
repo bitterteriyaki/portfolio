@@ -165,4 +165,4 @@ hooks in a configuration file, and they take care of installing hooks on the
 developer's machine automatically, ensuring that all team members use the same
 hooks and follow the same rules.
 
-![pre-commit example](https://res.cloudinary.com/built-with-django/image/upload/v1680283396/blog-images/djlint_first_run_202303290901_davtxp.png)
+![pre-commit example](/img/pre-commit.png)
