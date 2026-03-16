@@ -14,10 +14,10 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: '/img/card.png',
+  ogImage: 'https://i.imgur.com/0yIQu2V.png',
   twitterTitle: title,
   twitterDescription: description,
-  twitterImage: '/img/card.png',
+  twitterImage: 'https://i.imgur.com/0yIQu2V.png',
   twitterCard: 'summary_large_image',
 })
 </script>
