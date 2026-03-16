@@ -4,6 +4,7 @@
     color="neutral"
     icon="i-heroicons-arrow-left-20-solid"
     size="xs"
+    to="/blog"
   >
     Blog
   </UButton>
