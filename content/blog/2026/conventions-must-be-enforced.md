@@ -1,5 +1,7 @@
 ---
 title: Conventions must be enforced
+description: |
+  Learn why enforcing conventions is crucial for software development.
 date: 2026-03-13T16:27:00.000000-03:00
 minRead: 10
 image: '/img/conventions.png'

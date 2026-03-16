@@ -4,6 +4,17 @@ import { format } from 'date-fns'
 const fetch = () => queryCollection('blog').order('date', 'DESC').all()
 const { data: posts } = await useAsyncData('posts', fetch)
 
+const searchGroups = computed(() => [{
+  id: 'blog',
+  label: 'Posts',
+  items: posts.value?.map(post => ({
+    label: post.title,
+    suffix: post.description,
+    to: post.path,
+    icon: 'i-heroicons-document-text',
+  })) || [],
+}])
+
 const postsByYear = computed(() => {
   if (!posts.value)
     return []
@@ -35,14 +46,17 @@ useHead({
   <UContainer class="py-12">
     <div class="max-w-3xl mx-auto">
       <div class="mb-12">
-        <h1 class="text-4xl font-black mb-3">
-          Blog
-        </h1>
-        <p class="text-muted">
-          Thoughts on math, algorithms, and software engineering.
-        </p>
+        <div class="mb-3">
+          <h1 class="text-4xl font-black mb-3">
+            Blog
+          </h1>
+          <p class="text-muted">
+            Thoughts on math, algorithms, and software engineering.
+          </p>
+        </div>
+        <UContentSearchButton :collapsed="false" class="w-full" />
+        <UContentSearch :groups="searchGroups" />
       </div>
-
       <div class="flex flex-col gap-12">
         <div v-for="{ year, items } in postsByYear" :key="year">
           <h2

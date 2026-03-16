@@ -1,5 +1,8 @@
 ---
 title: Generating the Fibonacci sequence using matrices
+description: |
+  A different way to generate the Fibonacci sequence using linear algebra and
+  matrices.
 date: 2025-03-25T12:20:00.000000-03:00
 minRead: 8
 image: '/img/fibonacci.png'
