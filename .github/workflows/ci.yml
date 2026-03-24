@@ -1,34 +1,36 @@
-name: ci
+name: 🗃 CI
 
-on: push
+on:
+  push:
+  pull_request:
+    types:
+      - reopened
+  workflow_dispatch:
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
-
+    runs-on: ubuntu-latest
+    name: 🧪 Test the application
     strategy:
+      max-parallel: 4
       matrix:
-        os: [ubuntu-latest]
-        node: [22]
-
+        node-version: ['24.14']
+        pnpm-version: ['10.33', '10.32']
     steps:
-      - name: Checkout
+      - name: 📂 Checkout repository
         uses: actions/checkout@v6
-
-      - name: Install pnpm
+      - name: 📦 Install pnpm (${{ matrix.pnpm-version }})
         uses: pnpm/action-setup@v4
-
-      - name: Install node
+        with:
+          version: ${{ matrix.pnpm-version }}
+      - name: 🟢 Setup Node.js (${{ matrix.node-version }})
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ matrix.node-version }}
           cache: pnpm
-
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: pnpm install
-
-      - name: Lint
+      - name: 🔍 Run linter
         run: pnpm run lint
-
-      - name: Typecheck
+      - name: 🔎 Run typecheck
         run: pnpm run typecheck
