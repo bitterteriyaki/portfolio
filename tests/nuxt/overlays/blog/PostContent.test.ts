@@ -9,6 +9,7 @@ describe('Post Content Component', () => {
     title: 'Test Post Title',
     description: 'Test description',
     date: '2025-01-15',
+    language: 'english',
     image: '/img/test.png',
     minRead: 5,
     tags: ['vue', 'nuxt'],

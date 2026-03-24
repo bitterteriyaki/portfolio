@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface PostTagsProps {
-  language: string
+  language?: string
   tags: string[]
 }
 
@@ -15,7 +15,7 @@ defineProps<PostTagsProps>()
     <ul class="ml-2 flex flex-wrap gap-1">
       <li>
         <UBadge color="neutral" variant="soft">
-          {{ language }}
+          {{ language || 'unknown' }}
         </UBadge>
       </li>
       <li v-for="tag in tags" :key="tag">
