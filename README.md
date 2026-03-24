@@ -132,10 +132,8 @@ pnpm preview
 
 ## ✍️ Writing Blog Posts
 
-Posts live in `content/blog/<year>/` as Markdown files. The filename prefix
-(e.g. `1.`) controls ordering within a year.
-
-Each file must include the following frontmatter:
+Posts live in `content/blog/<year>/` as Markdown files. Each file must include
+the following frontmatter:
 
 ```yaml
 ---
