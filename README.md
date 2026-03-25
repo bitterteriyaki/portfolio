@@ -140,6 +140,7 @@ the following frontmatter:
 date: 2025-03-10
 minRead: 8
 image: /path/to/cover-image.png
+language: english
 author:
   name: kyomi
   description: software engineer
