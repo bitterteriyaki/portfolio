@@ -20,10 +20,10 @@ describe('Post Back Button Component', () => {
     expect(html).toContain('arrow-left')
   })
 
-  it('should be a link variant button', async () => {
+  it('should render as a link', async () => {
     const component = await mountSuspended(PostBackButton)
-    const button = component.find('button')
+    const link = component.find('a[href="/blog"]')
 
-    expect(button.exists()).toBe(true)
+    expect(link.exists()).toBe(true)
   })
 })

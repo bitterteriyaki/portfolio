@@ -10,16 +10,9 @@ describe('App Footer Component', () => {
     expect(component.html()).toBeTruthy()
   })
 
-  it('should display the copyright text with current year', async () => {
+  it('should display the footer text', async () => {
     const component = await mountSuspended(AppFooter)
-    const currentYear = new Date().getFullYear()
-
-    expect(component.text()).toContain(`© ${currentYear}`)
-  })
-
-  it('should display "Built with Nuxt UI" text', async () => {
-    const component = await mountSuspended(AppFooter)
-    expect(component.text()).toContain('Built with Nuxt UI')
+    expect(component.text()).toContain('Made with ❤️ by kyomi')
   })
 
   it('should contain the GitHub link', async () => {

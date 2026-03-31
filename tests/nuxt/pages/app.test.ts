@@ -18,10 +18,8 @@ describe('Base App Component', () => {
 
   it('should include the `AppFooter` component', async () => {
     const component = await mountSuspended(App)
-    const currentYear = new Date().getFullYear()
 
-    expect(component.text()).toContain(`© ${currentYear}`)
-    expect(component.text()).toContain('Built with Nuxt UI')
+    expect(component.text()).toContain('Made with ❤️ by kyomi')
   })
 
   it('should include the `AppMain` component', async () => {

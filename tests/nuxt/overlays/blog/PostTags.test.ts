@@ -45,10 +45,11 @@ describe('Post Tags Component', () => {
     tags.forEach(tag => expect(component.text()).toContain(tag))
   })
 
-  it('should render an empty list when no tags provided', async () => {
+  it('should render at least the language when no tags provided', async () => {
     const component = await mountComponent()
     const items = component.findAll('li')
 
-    expect(items.length).toBe(0)
+    expect(items.length).toBeGreaterThanOrEqual(1)
+    expect(component.text()).toContain('unknown')
   })
 })

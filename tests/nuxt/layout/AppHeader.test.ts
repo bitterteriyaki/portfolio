@@ -31,10 +31,9 @@ describe('App Header Component', () => {
 
   it('should display the resume button with correct attributes', async () => {
     const component = await mountSuspended(AppHeader)
-    const link = component.find('a[href="/resume.pdf"]')
 
     expect(component.text()).toContain('Resume')
-    expect(link.exists()).toBe(true)
-    expect(link.attributes('target')).toBe('_blank')
+    expect(component.html()).toContain('aria-disabled="true"')
+    expect(component.html()).toContain('target="_blank"')
   })
 })

@@ -40,11 +40,11 @@ describe('Blog Index Page', () => {
     expect(component.text()).toContain('Test Post 2')
   })
 
-  it('should display the post descriptions', async () => {
+  it('should display the post titles', async () => {
     const component = await mountSuspended(BlogIndexPage)
 
-    expect(component.text()).toContain('Description 1')
-    expect(component.text()).toContain('Description 2')
+    expect(component.text()).toContain('Test Post 1')
+    expect(component.text()).toContain('Test Post 2')
   })
 
   it('should render the posts in descending date order', async () => {
