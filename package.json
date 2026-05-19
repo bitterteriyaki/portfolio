@@ -38,7 +38,7 @@
     "@vueuse/core": "^14.2.1",
     "better-sqlite3": "^12.8.0",
     "date-fns": "^4.1.0",
-    "nuxt": "^4.4.2",
+    "nuxt": "^4.4.6",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "tailwindcss": "^4.2.2"
