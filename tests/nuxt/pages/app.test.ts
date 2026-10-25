@@ -21,11 +21,4 @@ describe('Base App Component', () => {
 
     expect(component.text()).toContain('Made with ❤️ by kyomi')
   })
-
-  it('should include the `AppMain` component', async () => {
-    const component = await mountSuspended(App)
-    const main = component.find('main')
-
-    expect(main.exists()).toBe(true)
-  })
 })

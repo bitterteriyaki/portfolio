@@ -4,8 +4,7 @@ const description = `
   Welcome to my personal website, where I share my thoughts on software
   engineering, algorithms, and mathematics. I'm a software engineer with a
   passion for learning and sharing knowledge. Here you'll find blog posts,
-  projects, and resources that I've created over the years. Feel free to explore
-  and reach out if you have any questions or just want to say hi!
+  projects, and resources that I've created over the years.
 `
 
 useHead({
@@ -31,10 +30,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UApp>
-    <AppHeader />
-    <AppMain />
-    <USeparator />
-    <AppFooter />
-  </UApp>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

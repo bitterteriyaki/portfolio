@@ -51,7 +51,7 @@ TailwindCSS.
 │   ├── components/
 │   │   ├── content/               # Prose overrides for Nuxt Content
 │   │   ├── landing/               # Home page sections (Hero, AboutMe, Experiences, LatestPosts)
-│   │   ├── layout/                # Shell components (AppHeader, AppFooter, AppMain)
+│   │   ├── layout/                # Shell components (AppHeader, AppFooter)
 │   │   └── overlays/blog/         # Blog post components (PostContent, PostInfo, PostTags…)
 │   ├── pages/
 │   │   ├── index.vue              # Landing page (/)
