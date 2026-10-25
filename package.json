@@ -2,6 +2,7 @@
   "name": "@bitterteriyaki/portfolio",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@11.21.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
