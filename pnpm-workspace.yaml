@@ -19,3 +19,10 @@ ignoredBuiltDependencies:
 onlyBuiltDependencies:
   - 'better-sqlite3'
   - 'sharp'
+
+overrides:
+  '@tiptap/core': ^3.32.0
+  '@tiptap/pm': ^3.32.0
+  esbuild: ^0.28.2
+  katex: ^0.19.1
+  prosemirror-view: ^1.42.8
